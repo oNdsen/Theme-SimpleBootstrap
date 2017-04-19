@@ -1,0 +1,35 @@
+.table td, .table th {
+        border: none;
+}
+.administration-table:first-of-type {
+        max-width: 600px;
+        text-align: center;
+}
+
+.administration-buttons {
+        display: inline-block;
+        width: 160px;
+        height: 100px;
+        background-color: #434857;
+        color: #fff;
+        border-radius: 5px;
+}
+
+.administration-buttons:hover {
+        opacity: 0.6;
+	text-decoration: none !important;
+}
+
+.administration-buttons img,
+.administration-buttons br
+{
+	display: none;
+}
+
+.administration-buttons:before {
+        font-family: 'FontAwesome';
+        display: block;
+        margin-top: 5px;
+        font-size: 40px;
+}
+

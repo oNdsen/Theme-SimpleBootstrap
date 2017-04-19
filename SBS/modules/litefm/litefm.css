@@ -1,0 +1,39 @@
+a:before {
+	content: "" !important;
+}
+.viewitem {
+	width: 16px;
+	height: 16px;
+}
+.file-operations {
+	margin-bottom: 10px;
+}
+.operations-button
+{
+	display: inline-block;
+	width: 150px;
+	height: 20px;
+	background-color: #1997c6;
+	border-radius: 4px;
+	margin: 2px;
+	float: left;
+	color: #fff;
+	font-size: 12px;
+}
+.operations-button:hover {
+	color: #fff;
+	cursor: pointer;
+	background-image: -webkit-linear-gradient(top, #106382, #1997c6);
+	background-image: linear-gradient(to bottom, #106382, #1997c6);
+}
+.operations-button img {
+	float: left;
+	margin: 0px 5px;
+}
+table tbody tr:nth-child(odd) {
+	background: rgba(67, 72, 87, 0.6) !important;
+}
+a[href^="?m=litefm&home_id="] {
+	margin-right: 5px;
+}
+

@@ -1,0 +1,125 @@
+img[src^="modules/status/include/bar.php?rating="]
+{
+	height: 25px;
+}
+
+h0 {
+	clear: both;
+	display: block;
+	font-size: 1.5rem;
+	//background-color: #1a1c22;
+	background-color: rgba(26, 28, 34, 0.6);
+	padding: 10px;
+	margin: 40px 20px 0px;
+}
+
+.one_fourth {
+	width: 25%;
+	float: left;
+}
+
+.one_two {
+	width: 50%;
+	float: left;
+}
+
+.column {
+	min-height: 150px;
+}
+
+.column .placeholder {
+	background: #1a1c22;
+	margin: 20px;
+}
+
+.dragbox h4 .configure {
+	width: 30px;
+	height: 30px;
+	float: right;
+	opacity: 0.8;
+}
+.dragbox h4 .configure:before {
+        font-family: 'FontAwesome';
+        content: "\f063";
+}
+
+.dragbox > .ui-sortable:hover,
+.dragbox > .ui-sortable-handle:hover
+{
+	cursor: move;
+}
+
+.online_servers {
+	color: #1997c6;
+	border-spacing: 0px 3px;
+	border-collapse: separate;
+	background: transparent;
+}
+.online_servers .name img {
+	margin-right: 4px;
+}
+.online_servers #gamelink {
+	float: right;
+}
+.online_servers div {
+	display: inline-block;
+}
+.online_servers td {
+	background-color: #1997c6;
+	border-radius: 4px;
+	padding: 2px 10px;
+	border: none;
+}
+.online_servers a
+{
+	color: #fff;
+}
+.online_servers a:hover
+{
+        color: #252830;
+}
+
+#column4 br {
+	display: none;
+}
+
+/* *** SYSTEM UPTIME *** */
+#refreshed-0 > #column4:nth-child(1){
+}
+
+/* *** CPU USAGE *** */
+#refreshed-0 > #column4:nth-child(2){
+}
+
+/* *** RAM USAGE *** */
+#refreshed-0 > #column4:nth-child(3){
+}
+
+/* *** STORAGE SPACE *** */
+#refreshed-0 > #column4:nth-child(4){
+}
+
+#item5 img,
+#item1 img,
+#item4 img {
+        display: none;
+}
+#item5 > div:before,
+#item1 > div:before,
+#item4 > div:before {
+        display: inline-block;
+	font-family: "FontAwesome";
+	font-size: 48px;
+        float: right;
+	height: 48px;
+	margin: 0px 0px 5px 5px;
+}
+#item5 > div:before {
+	content: "\f29c";
+}
+#item1 > div:before {
+	content: "\f108";
+}
+#item4 > div:before {
+	content: "\f15c";
+}

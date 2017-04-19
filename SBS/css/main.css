@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url("/themes/SBS/css/font-awesome.min.css");
+
+html {
+	background-color: #111215;
+}
+body {
+	font-family: Roboto;
+	color: #fff;
+	font-size: 14px;
+	background-color: #111215;
+	background: url(/themes/SBS/images/blur_dark.jpg) no-repeat center center fixed;
+	min-width: 768px !important;
+}
+.ftp_iframe {
+        background: transparent !important;
+}
+a {
+	color: #1997c6;
+	text-decoration: none;
+}
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+h0, h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	color: #fff;
+	border-bottom: 1px solid #434857;
+	padding-bottom: 10px;
+}
+dl, ol, ul {
+	list-style: none;
+	padding: 0px;
+}
+
+.logo {
+	margin: 20px 10px;
+}
+h4.collapse {
+	display: block !important;
+}
+.bloc {
+	padding: 10px;
+	margin: 20px;
+}
+.col.footer {
+	background-color: rgba(26, 28, 34, 0.8);
+	padding: 40px;
+	margin-top: 40px;
+}
+.footer.center {
+	text-align: left !important;
+}
+pre {
+	background-color: rgba(26, 28, 34, 0.6);
+	border-bottom: 1px solid #434857;
+	color: #cfd2da;
+}
+pre:not(.log) {
+	padding: 20px;
+	border-radius: 4px;
+}
+.hidden {
+	display: none;
+}
+.install,
+.uninstall {
+	color: #1997c6 !important;
+}
+
+/* ***** MENU ***** */
+.menu ul[id^=submenu] > li > a,
+.menu [class$="menu_link"],
+.menu [class$="menu_link_selected"]
+{
+	border-bottom: 1px solid #23282e;
+}
+
+.menu ul,
+.menu li {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	line-height: 35px;
+	cursor: pointer;
+	background-color: rgba(26, 28, 34, 0.6);
+}
+
+.menu ul#administration,
+.menu ul#administration li,
+.menu ul[id^=submenu],
+.menu ul[id^=submenu] li {
+	line-height: 25px;
+}
+
+.menu li:hover,
+.menu .ready,
+[class$="menu_link_selected"] {
+	background-color: #1997c6 !important;
+	text-decoration: none;
+}
+
+.menu a {
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	padding: 0px 10px;
+}
+
+.menu #submenu_1 a {
+	padding: 0px 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.menu ul[id^=submenu] a,
+.menu ul#administration a,
+.menu ul > li > ul a
+{
+	font-size: 10px;
+	background-color: rgba(26, 28, 34, 0.6);
+}
+
+.menu a:hover {
+	text-decoration: none;
+}
+
+.menu ul li ul {
+	overflow:hidden;
+	max-height:0;
+	transition:max-height 1s ease-in;
+}
+.menu .opened {
+	max-height: 1000px;
+}
+.menu img {
+	max-height: 15px;
+	margin-right: 5px;
+	border-radius: 2px;
+}
+.menu ul[id^=submenu] span {
+	
+}
+
+
+/* *** FORMS *** */
+.center .form-control {
+	margin: auto;
+}
+.form-control {
+	font-size: 0.9rem;
+	color: #fff;
+	background-color: #434857;
+}
+.form-control:focus {
+	background-color: #53555f;
+	outline: none;
+	border-color: transparent;
+	color: #fff;
+}
+.form-control#days,
+.form-control#month,
+.form-control#years,
+.form-control#hours,
+.form-control#minutes
+{
+	width: auto !important;
+	display: inline-block;
+}
+.form-control[name="minute"],
+.form-control[name="hour"],
+.form-control[name="dayOfTheMonth"],
+.form-control[name="month"],
+.form-control[name="dayOfTheWeek"]
+{
+	width: 40px;
+}
+[type="radio"],
+[type="checkbox"]
+{
+	margin-top: -1px;
+	vertical-align: middle;
+	margin: 0px 4px;
+}
+select.form-control {
+	width: auto;
+}
+textarea.form-control{
+	height: 40vh;
+	min-height: 250px;
+}
+.btn {
+	margin: 0px 10px 10px 0px;
+}
+
+
+table,
+.table .table
+{
+	background: rgba(67, 72, 87, 0.6);
+}
+.table td, .table th {
+	border-top: none;
+}
+td {
+        padding: 1px 5px;
+}
+.table .odd,
+.table tr:nth-child(even) {
+        background: rgba(40, 42, 49, 0.3);
+}
+.table .table,
+form[name="login_form"]
+{
+        width: 600px;
+}
+.table.center,
+.table.center th {
+        text-align: center;
+}
+
+.mfp-close-btn-in .mfp-close {
+	color: white !important;
+}
+.mfp-close-btn-in .mfp-close:hover {
+	background-color: #1997c6 !important;
+}
+
+/*#refresh-manual {
+	display: block;
+	text-align: right;
+	background: rgba(26, 28, 34, 0.6);
+	margin-bottom: 20px;
+	padding: 10px 20px;
+}
+.redirectLink {
+	display: inline-block;
+	padding: 6px 12px;
+	background-color: #fff;
+	border-color: #ccc;
+	color: #333;
+	line-height: 1.42857143;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.redirectLink:hover {
+	background-color: rgb(230, 230, 230);
+	border-bottom-color: rgb(173, 173, 173);
+	color: rgb(51, 51, 51);
+}*/
+.redirectLink {
+	display: block;
+	font-size: 1.5rem;
+	background-color: rgba(26, 28, 34, 0.6);
+	padding: 10px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	color: #fff;
+	border-bottom: 1px solid #434857;
+}
+.redirectLink:hover:after {
+	font-family: 'FontAwesome';
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 15px;
+	content: "\f061";
+}
+
+.image-tip:hover .tip, .tip:hover {
+	margin-left: -420px !important;
+}
+
+
+
+/* *** FONT-AWESOME DECLARATIONS *** */
+a:before {
+        font-family: 'FontAwesome';
+}
+
+.main a:not(.administration-buttons):not(.monitorbutton):before {
+	display: none;
+}
+
+.menu a:before {
+	width: 18px;
+	display: inline-block;
+}
+.menu .tree:before {
+	display: inline-block;
+	float: right;
+	font-family: FontAwesome;
+	content: "\f104";
+	margin-right: 10px;
+}
+.menu .tree.active:before {
+	content: "\f107";
+}
+
+.monitorbutton:before
+{
+	content: "hoi";
+	display: block;
+	font-size: 40px;
+	margin-bottom: -5px;
+}
+.loading:before {
+	content: "\f021" !important;
+	-webkit-animation: fa-spin 2s infinite linear;
+	animation: fa-spin 2s infinite linear;
+}
+
+[href="?m=dashboard&p=dashboard"]:before { content: "\f0e4"; }
+[href="?m=gamemanager&p=game_monitor"]:before { content: "\f108"; }
+[href="?m=administration&p=main"]:before { content: "\f023"; }
+[href="?m=TS3Admin"]:before { content: "\f086"; }
+[href^="?m=gamemanager&p=log"]:before { content: "\f1da"; }
+[href="?m=addonsmanager&p=addons_manager"]:before { content: "\f12e"; }
+[href="?m=extras"]:before { content: "\f1e6"; }
+[href^="?m=ftp"]:before { content: "\f15c"; }
+[href="?m=user_games"]:before { content: "\f11b"; }
+[href="?m=config_games"]:before { content: "\f046"; }
+[href^="?m=litefm"]:before,
+.monitorbutton.size:before { content: "\f115"; }
+[href="?m=litefm&p=litefm_settings"]:before,
+[href^="?m=user_games&p=edit"]:before { content: "\f085"; }
+[href="?m=modulemanager"]:before { content: "\f009"; }
+[href="?m=settings"]:before { content: "\f1de"; }
+[href="?m=server"]:before { content: "\f233"; }
+[href="?m=settings&p=themes"]:before { content: "\f043"; }
+[href="?m=update"]:before { content: "\f021"; }
+.monitorbutton.getAutoUpdateLink:before { content: "\f0c1"; }
+[href^="?m=gamemanager&p=update"]:before { content: "\f1b6"; }
+[href^="?m=user_admin"]:before { content: "\f007"; }
+[href="?m=user_admin&p=show_groups"]:before { content: "\f0c0"; }
+[href="?m=administration&p=watch_logger"]:before { content: "\f017"; }
+[href^="?m=cron"]:before { content: "\f073"; }
+[href="?m=mysql&p=mysql_admin"]:before { content: "\f1c0"; }
+[href="?m=administration&p=banlist"]:before { content: "\f05e"; }
+[href^="home.php?m=gamemanager&p=rcon_presets"]:before,
+[href="?m=rcon&p=rcon"]:before { content: "\f120"; }
+[href^="?m=gamemanager&p=rsync_install"]:before { content: "\f0ad"; }
