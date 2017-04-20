@@ -1,9 +1,10 @@
 .table td, .table th {
         border: none;
 }
-.administration-table:first-of-type {
-        max-width: 600px;
-        text-align: center;
+
+.main .flex-container {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .administration-buttons {
@@ -13,10 +14,12 @@
         background-color: #434857;
         color: #fff;
         border-radius: 5px;
+	margin: 5px;
+	text-align: center;
 }
 
 .administration-buttons:hover {
-        opacity: 0.6;
+	background-color: #1997c6;
 	text-decoration: none !important;
 }
 
