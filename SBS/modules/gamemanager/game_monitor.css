@@ -2,7 +2,7 @@
 #server_icon
 {
 	width: 150px;
-	background-color: #1997c6;
+	background-color: #434857;
 	border-radius: 4px;
 	margin: 2px;
 	float: left;
@@ -25,9 +25,7 @@
 {
 	color: #fff;
 	cursor: pointer;
-        background-image: -webkit-linear-gradient(top, #106382, #1997c6);
-        background-image: linear-gradient(to bottom, #106382, #1997c6);
-
+	background-color: #1997c6;
 }
 .monitorButtonContainer > form {
 	clear: both;
