@@ -160,6 +160,10 @@ pre:not(.log) {
 	border-color: transparent;
 	color: #fff;
 }
+.form-control:disabled,
+.form-control[readonly] {
+	color: #464a4c;
+}
 .form-control#days,
 .form-control#month,
 .form-control#years,
@@ -214,7 +218,14 @@ td {
 .table .table,
 form[name="login_form"]
 {
-        width: 600px;
+        //max-width: 600px;
+}
+@media (max-width: 991px) {
+	.col {
+		-webkit-flex-basis: inherit;
+		-ms-flex-preferred-size: inherit;
+		flex-basis: inherit;
+	}
 }
 .table.center,
 .table.center th {
@@ -300,7 +311,6 @@ a:before {
 
 .monitorbutton:before
 {
-	content: "hoi";
 	display: block;
 	font-size: 40px;
 	margin-bottom: -5px;
@@ -341,3 +351,10 @@ a:before {
 [href^="home.php?m=gamemanager&p=rcon_presets"]:before,
 [href="?m=rcon&p=rcon"]:before { content: "\f120"; }
 [href^="?m=gamemanager&p=rsync_install"]:before { content: "\f0ad"; }
+[href^="?m=support"]:before { content: "\f29c"; }
+[href^="?m=fast_download"]:before { content: "\f019"; }
+[href^="?m=dsi"]:before { content: "\f03e"; }
+[href^="?m=simple-billing"]:before { content: "\f07a"; }
+[href^="?m=util"]:before { content: "\f0ad"; }
+[href^="?m=lgsl_with_img_mod"]:before { content: "\f022"; }
+[href^="?m=news"]:before { content: "\f1ea"; }
