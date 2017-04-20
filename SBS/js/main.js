@@ -26,7 +26,7 @@ $(document).ready(function() {
 		$(this).before("<img src='"+img_url+"'/>");
 	});
 
-	$('.menu [class$="menu_link_selected"]').next('ul').addClass('opened').parent('li').addClass('active');
+	$('.menu [class$="menu_link_selected"]').addClass('ready').next('ul').addClass('opened').parent('li').addClass('active');
 	$('.menu a').next('ul').parent('li').addClass('tree');
 
 	$('.menu a').click(function () {
