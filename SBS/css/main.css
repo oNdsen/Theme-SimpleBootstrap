@@ -69,6 +69,9 @@ pre:not(.log) {
 }
 
 /* ***** MENU ***** */
+.menu {
+	margin-bottom: 20px;
+}
 .menu ul[id^=submenu] > li > a,
 .menu [class$="menu_link"],
 .menu [class$="menu_link_selected"]
@@ -118,8 +121,9 @@ pre:not(.log) {
 .menu ul#administration a,
 .menu ul > li > ul a
 {
-	font-size: 10px;
+	font-size: 12px;
 	background-color: rgba(26, 28, 34, 0.6);
+	padding-left: 16px;
 }
 
 .menu a:hover {
@@ -210,9 +214,19 @@ table,
 td {
         padding: 1px 5px;
 }
-.table .odd,
+/*.table .odd,
 .table tr:nth-child(even) {
         background: rgba(40, 42, 49, 0.3);
+}*/
+.table tr:nth-child(even),
+.table tr:hover{
+        background-color: rgba(40, 42, 49, 0.3) !important;
+}
+.table tr:nth-child(odd) {
+        background-color: inherit !important;
+}
+tr.maintr {
+    border-bottom: 1px solid rgba(40, 42, 49, 0.3);
 }
 .table .table,
 form[name="login_form"]
