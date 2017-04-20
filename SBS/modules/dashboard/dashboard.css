@@ -1,13 +1,23 @@
-img[src^="modules/status/include/bar.php?rating="]
-{
-	height: 25px;
+.progress {
+	border-bottom: 1px solid rgba(67, 72, 87, 0.4) !important;
+	background-color: rgba(26, 28, 34, 0.6) !important;
+}
+.progress .progress-bar {
+	background: #5cb85c;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	-webkit-background-size: 1rem 1rem;
+	background-size: 1rem 1rem;
+	-webkit-animation: progress-bar-stripes 1s linear infinite;
+	-o-animation: progress-bar-stripes 1s linear infinite;
+	animation: progress-bar-stripes 1s linear infinite;
 }
 
 h0 {
 	clear: both;
 	display: block;
 	font-size: 1.5rem;
-	//background-color: #1a1c22;
 	background-color: rgba(26, 28, 34, 0.6);
 	padding: 10px;
 	margin: 40px 20px 0px;
