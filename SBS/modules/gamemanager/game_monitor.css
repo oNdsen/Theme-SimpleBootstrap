@@ -102,8 +102,8 @@ tr.maintr td:last-child {
 #servermonitor .monitor-3 table {
 	width: 100%;
 }
-#servermonitor .ts3_viewer server {
-	margin-top: 10px;
+#servermonitor .monitor-3 > div {
+	padding: 10px 0px;
 }
 .mapicon {
 	border-radius: 4px;
@@ -146,3 +146,32 @@ tr.maintr td:last-child {
         color: #d9534f;
 }
 
+.upload-image {
+	margin: 0px 10px 10px 0px;
+	padding: .25rem .5rem;
+	font-size: .875rem;
+	border-radius: .2rem;
+	color: #292b2c;
+	background-color: #fff;
+	border-color: #ccc;
+	display: inline-block;
+	font-weight: 400;
+	line-height: 1.25;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 1px solid transparent;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+
+}
+.upload-image:hover {
+	color: #292b2c;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
