@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-@import url("./font-awesome.min.css");
+@import url("font-awesome.min.css");
 
 html {
 	background-color: #111215;
@@ -62,10 +62,6 @@ pre:not(.log) {
 }
 .hidden {
 	display: none;
-}
-.install,
-.uninstall {
-	color: #1997c6 !important;
 }
 
 /* ***** MENU ***** */
