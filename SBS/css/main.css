@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-@import url("/themes/SBS/css/font-awesome.min.css");
+@import url("./font-awesome.min.css");
 
 html {
 	background-color: #111215;
@@ -9,7 +9,7 @@ body {
 	color: #fff;
 	font-size: 14px;
 	background-color: #111215;
-	background: url(/themes/SBS/images/blur_dark.jpg) no-repeat center center fixed;
+	background: url(../images/blur_dark.jpg) no-repeat center center fixed;
 }
 .ftp_iframe {
         background: transparent !important;
