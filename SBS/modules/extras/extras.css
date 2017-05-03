@@ -25,3 +25,6 @@ b:not(:first-of-type){
 	font-weight: normal !important;
 	line-height: 20px !important;
 }
+.fa {
+	margin-left: 5px;
+}

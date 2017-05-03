@@ -104,6 +104,8 @@ tr.maintr td:last-child {
 }
 #servermonitor .monitor-3 > div {
 	padding: 10px 0px;
+	background-color: rgba(40, 42, 49, 0.3) !important;
+	border: 1px solid rgba(40, 42, 49, 1) !important;
 }
 .mapicon {
 	border-radius: 4px;
@@ -175,3 +177,6 @@ tr.maintr td:last-child {
 	background-color: #e6e6e6;
 	border-color: #adadad;
 }
+
+.monitorbutton.size:before { content: "\f115"; }
+.monitorbutton.getAutoUpdateLink:before { content: "\f0c1"; }

@@ -11,9 +11,6 @@ body {
 	background-color: #111215;
 	background: url(../images/blur_dark.jpg) no-repeat center center fixed;
 }
-.ftp_iframe {
-        background: transparent !important;
-}
 a {
 	color: #1997c6;
 	text-decoration: none;
@@ -22,6 +19,30 @@ a:hover {
 	color: #fff;
 	text-decoration: none;
 }
+
+::-webkit-scrollbar-button{
+	display: none;
+}
+::-webkit-scrollbar-button:hover{
+	background-color: #AAA;
+}
+::-webkit-scrollbar-thumb{
+	background-color: #CCC;
+}
+::-webkit-scrollbar-thumb:hover{
+	background-color: #CCC;
+}
+::-webkit-scrollbar-track{
+	background-color: rgba(40, 42, 49, 1);
+}
+::-webkit-scrollbar-track:hover{
+	background-color: #CCC;
+}
+::-webkit-scrollbar{
+	width: 3px;
+	height: 3px;
+}
+
 h0, h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	color: #fff;
@@ -55,8 +76,6 @@ pre {
 	background-color: rgba(26, 28, 34, 0.6);
 	border-bottom: 1px solid #434857;
 	color: #cfd2da;
-}
-pre:not(.log) {
 	padding: 20px;
 	border-radius: 4px;
 }
@@ -210,10 +229,6 @@ table,
 td {
         padding: 1px 5px;
 }
-/*.table .odd,
-.table tr:nth-child(even) {
-        background: rgba(40, 42, 49, 0.3);
-}*/
 .table tr:nth-child(even),
 .table tr:hover{
         background-color: rgba(40, 42, 49, 0.3) !important;
@@ -247,29 +262,6 @@ form[name="login_form"]
 .mfp-close-btn-in .mfp-close:hover {
 	background-color: #1997c6 !important;
 }
-
-/*#refresh-manual {
-	display: block;
-	text-align: right;
-	background: rgba(26, 28, 34, 0.6);
-	margin-bottom: 20px;
-	padding: 10px 20px;
-}
-.redirectLink {
-	display: inline-block;
-	padding: 6px 12px;
-	background-color: #fff;
-	border-color: #ccc;
-	color: #333;
-	line-height: 1.42857143;
-	border: 1px solid transparent;
-	border-radius: 4px;
-}
-.redirectLink:hover {
-	background-color: rgb(230, 230, 230);
-	border-bottom-color: rgb(173, 173, 173);
-	color: rgb(51, 51, 51);
-}*/
 .redirectLink {
 	display: block;
 	font-size: 1.5rem;
@@ -293,16 +285,17 @@ form[name="login_form"]
 }
 
 
+/* *** Magnific Override *** */
+.magnificTitle {
+	font-family: Roboto;
+}
+
+
 
 /* *** FONT-AWESOME DECLARATIONS *** */
 a:before {
         font-family: 'FontAwesome';
 }
-
-.main a:not(.administration-buttons):not(.monitorbutton):before {
-	display: none;
-}
-
 .menu a:before {
 	width: 22px;
 	display: inline-block;
@@ -329,44 +322,74 @@ a:before {
 	-webkit-animation: fa-spin 2s infinite linear;
 	animation: fa-spin 2s infinite linear;
 }
+.loading {
+	content: "Loading..." !important;
+}
 
-[href="?m=dashboard&p=dashboard"]:before { content: "\f0e4"; }
-[href="?m=gamemanager&p=game_monitor"]:before { content: "\f108"; }
-[href="?m=administration&p=main"]:before { content: "\f023"; }
-[href="?m=TS3Admin"]:before { content: "\f086"; }
-[href^="?m=gamemanager&p=log"]:before { content: "\f1da"; }
-[href="?m=addonsmanager&p=addons_manager"]:before { content: "\f12e"; }
-[href="?m=extras"]:before { content: "\f1e6"; }
-[href^="?m=ftp"]:before { content: "\f15c"; }
-[href="?m=user_games"]:before { content: "\f11b"; }
-[href="?m=config_games"]:before { content: "\f046"; }
-[href^="?m=litefm"]:before,
-.monitorbutton.size:before { content: "\f115"; }
-[href="?m=litefm&p=litefm_settings"]:before,
-[href^="?m=user_games&p=edit"]:before { content: "\f085"; }
-[href="?m=modulemanager"]:before { content: "\f009"; }
-[href="?m=settings"]:before { content: "\f1de"; }
-[href="?m=server"]:before { content: "\f233"; }
-[href="?m=settings&p=themes"]:before { content: "\f043"; }
-[href="?m=update"]:before { content: "\f021"; }
-.monitorbutton.getAutoUpdateLink:before { content: "\f0c1"; }
-[href^="?m=gamemanager&p=update"]:before { content: "\f1b6"; }
-[href^="?m=user_admin"]:before { content: "\f007"; }
-[href="?m=user_admin&p=show_groups"]:before { content: "\f0c0"; }
-[href="?m=administration&p=watch_logger"]:before { content: "\f017"; }
-[href^="?m=cron"]:before { content: "\f073"; }
-[href="?m=mysql&p=mysql_admin"]:before { content: "\f1c0"; }
-[href="?m=administration&p=banlist"]:before { content: "\f05e"; }
-[href^="home.php?m=gamemanager&p=rcon_presets"]:before,
-[href="?m=rcon&p=rcon"]:before { content: "\f120"; }
-[href^="?m=gamemanager&p=rsync_install"]:before { content: "\f0ad"; }
-[href^="?m=support"]:before { content: "\f29c"; }
-[href^="?m=fast_download"]:before { content: "\f019"; }
-[href^="?m=dsi"]:before { content: "\f03e"; }
-[href^="?m=simple-billing"]:before { content: "\f07a"; }
-[href^="?m=util"]:before { content: "\f0ad"; }
-[href^="?m=lgsl_with_img_mod"]:before { content: "\f022"; }
-[href^="?m=news"]:before { content: "\f1ea"; }
-[href^="?m=register"]:before { content: "\f067"; }
-[href="?logout"]:before { content: "\f08b"; }
-[href="index.php"]:before { content: "\f0e4"; }
+.menu [href="?m=dashboard&p=dashboard"]:before,
+.administration-table [href="?m=dashboard&p=dashboard"]:before { content: "\f0e4"; }
+.menu [href="?m=gamemanager&p=game_monitor"]:before { content: "\f108"; }
+.menu [href="?m=administration&p=main"]:before { content: "\f023"; }
+.menu [href="?m=TS3Admin"]:before { content: "\f086"; }
+.menu [href^="?m=gamemanager&p=log"]:before,
+.monitorButtonContainer [href^="?m=gamemanager&p=log"]:before { content: "\f1da"; }
+.menu [href="?m=addonsmanager&p=addons_manager"]:before,
+.administration-table [href="?m=addonsmanager&p=addons_manager"]:before { content: "\f12e"; }
+.menu [href="?m=extras"]:before,
+.administration-table [href="?m=extras"]:before{ content: "\f1e6"; }
+.menu [href^="?m=ftp"]:before,
+.monitorButtonContainer [href^="?m=ftp"]:before,
+.administration-table [href^="?m=ftp"]:before{ content: "\f15c"; }
+.menu [href="?m=user_games"]:before,
+.administration-table [href="?m=user_games"]:before{ content: "\f11b"; }
+.menu [href="?m=config_games"]:before,
+.administration-table [href="?m=config_games"]:before{ content: "\f046"; }
+.menu [href^="?m=litefm"]:before,
+.menu [href="?m=litefm&p=litefm_settings"]:before,
+.administration-table [href="?m=litefm&p=litefm_settings"]:before,
+.menu [href^="?m=user_games&p=edit"],
+.monitorButtonContainer [href^="?m=user_games&p=edit"]:before{ content: "\f085"; }
+.menu [href="?m=modulemanager"]:before,
+.administration-table [href="?m=modulemanager"]:before { content: "\f009"; }
+.menu [href="?m=settings"]:before,
+.administration-table [href="?m=settings"]:before { content: "\f1de"; }
+.menu [href="?m=server"]:before,
+.administration-table [href="?m=server"]:before { content: "\f233"; }
+.menu [href="?m=settings&p=themes"]:before,
+.administration-table [href="?m=settings&p=themes"]:before { content: "\f043"; }
+.menu [href="?m=update"]:before,
+.administration-table [href="?m=update"]:before { content: "\f021"; }
+.menu [href^="?m=gamemanager&p=update"]:before,
+.monitorButtonContainer [href^="?m=gamemanager&p=update"]:before { content: "\f1b6"; }
+.menu [href^="?m=user_admin"]:before,
+.administration-table [href^="?m=user_admin"]:before{ content: "\f007"; }
+.menu [href="?m=user_admin&p=show_groups"]:before { content: "\f0c0"; }
+.menu [href="?m=administration&p=watch_logger"]:before,
+.administration-table [href="?m=administration&p=watch_logger"]:before { content: "\f017"; }
+.menu [href^="?m=cron"]:before,
+.administration-table [href^="?m=cron"]:before { content: "\f073"; }
+.menu [href="?m=mysql&p=mysql_admin"]:before,
+.administration-table [href="?m=mysql&p=mysql_admin"]:before { content: "\f1c0"; }
+.menu [href="?m=administration&p=banlist"]:before,
+.administration-table [href="?m=administration&p=banlist"]:before { content: "\f05e"; }
+.menu [href^="home.php?m=gamemanager&p=rcon_presets"]:before,
+.monitorButtonContainer [href^="home.php?m=gamemanager&p=rcon_presets"]:before,
+.menu [href="?m=rcon&p=rcon"]:before,
+.administration-table [href="?m=rcon&p=rcon"]:before { content: "\f120"; }
+.menu [href^="?m=gamemanager&p=rsync_install"]:before { content: "\f0ad"; }
+.menu [href^="?m=support"]:before { content: "\f29c"; }
+.menu [href^="?m=fast_download"]:before,
+.administration-table [href^="?m=fast_download"]:before { content: "\f019"; }
+.menu [href^="?m=dsi"]:before,
+.administration-table [href^="?m=dsi"]:before{ content: "\f03e"; }
+.menu [href^="?m=simple-billing"]:before,
+.menu [href^="?m=simple-billing"]:before,
+.administration-table [href^="?m=simple-billing"]:before { content: "\f07a"; }
+.menu [href^="?m=util"]:before { content: "\f0ad"; }
+.menu [href^="?m=lgsl_with_img_mod"]:before { content: "\f022"; }
+.menu [href^="?m=news"]:before,
+.administration-table [href^="?m=news"]:before { content: "\f1ea"; }
+.menu [href^="?m=register"]:before { content: "\f067"; }
+.menu [href="?logout"]:before { content: "\f08b"; }
+.menu [href="index.php"]:before { content: "\f0e4"; }
+.monitorButtonContainer [href^="?m=litefm"]:before { content: "\f03a"; }

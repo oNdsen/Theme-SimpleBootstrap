@@ -1,14 +1,5 @@
 $(document).ready(function() {
 
-	/* *** Login Form Mod *** */
-	/*var homepages = ['/', 'index.php'];
-	if (homepages.indexOf(window.location.pathname) >= 0) {
-		$('.main').html($('.bloc').html());
-		var lang = $('form[name="login_form"] tr:eq(0)');
-		$('form[name="login_form"] tr:eq(2)').after(lang.contents());
-		lang.remove();
-	}*/
-
 	/* *** Several Class and Style Stuff *** */
 	var inputs = $('input, textarea, select').not(':input[type=button], :input[type=submit], :input[type=reset], :input[type=radio], :input[type=checkbox], :input[type=image]');
 	$(inputs).addClass('form-control').removeAttr('style');
@@ -50,7 +41,5 @@ $(document).ready(function() {
 	if(window.location.href.indexOf("home.php?m=TS3Admin") != -1 ){
 		$('link[href="modules/TS3Admin/webinterface.css"]').remove();
 	}
-
-
 
 });

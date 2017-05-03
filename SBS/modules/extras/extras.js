@@ -22,8 +22,9 @@ $(document).ready(function() {
 	});
 	$('.dragbox-content br').remove();
 
+	$('b[style="color:green;"').append('<i class="fa fa-check"></i>');
+	$('b[style="color:red;"').append('<i class="fa fa-ban"></i>');
 	$('b[style^="color:"]').addClass('badge').addClass('badge-default').removeAttr('style');
-
 
 });
 

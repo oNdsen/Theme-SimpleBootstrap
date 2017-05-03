@@ -77,7 +77,7 @@ h0 {
 .online_servers td {
 	background-color: #1997c6;
 	border-radius: 4px;
-	padding: 2px 10px;
+	padding: 2px 10px !important;
 	border: none;
 }
 .online_servers a
@@ -132,4 +132,13 @@ h0 {
 }
 #item4 > div:before {
 	content: "\f15c";
+}
+.online_servers img {
+	display: none;
+}
+.online_servers .name a:before {
+	display: inline-block !important;
+	margin-right: 5px;
+	font-size: 75%;
+	content: "\f002";
 }

@@ -8,5 +8,9 @@ $(document).ready(function() {
 		var newContent = $(this).text().replace('[', '').replace(']', '');
         	$(this).text(newContent);
 	});
-
+	$('.size').each(function() {
+		var newSize = $(this).text().replace('[', '').replace(']', '')
+		$(this).text(newSize);
+	});
+	$('.size').addClass('badge').addClass('badge-default');
 });
