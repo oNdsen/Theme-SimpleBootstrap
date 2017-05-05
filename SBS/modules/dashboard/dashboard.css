@@ -1,26 +1,20 @@
-.progress {
+b {
+	font-weight: normal !important;
+}
+/*.progress {
 	border-bottom: 1px solid rgba(67, 72, 87, 0.4) !important;
 	background-color: rgba(26, 28, 34, 0.6) !important;
-}
-.progress .progress-bar {
-	background: #5cb85c;
-	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-	background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-	background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-	-webkit-background-size: 1rem 1rem;
-	background-size: 1rem 1rem;
-	-webkit-animation: progress-bar-stripes 1s linear infinite;
-	-o-animation: progress-bar-stripes 1s linear infinite;
-	animation: progress-bar-stripes 1s linear infinite;
-}
+}*/
 
 h0 {
 	clear: both;
-	display: block;
+	display: inline-block;
 	font-size: 1.5rem;
-	background-color: rgba(26, 28, 34, 0.6);
+	background-color: rgba(25,151,198,0.5);
 	padding: 10px;
-	margin: 40px 20px 0px;
+	margin: 40px 0px 20px;
+	width: 100%;
+	border-bottom: none;
 }
 
 .one_fourth {
@@ -75,9 +69,8 @@ h0 {
 	display: inline-block;
 }
 .online_servers td {
-	background-color: #1997c6;
 	border-radius: 4px;
-	padding: 2px 10px !important;
+	padding: 3px 10px !important;
 	border: none;
 }
 .online_servers a
@@ -86,12 +79,9 @@ h0 {
 }
 .online_servers a:hover
 {
-        color: #252830;
+        color: rgba(255, 255, 255, 0.6);
 }
 
-#column4 br {
-	display: none;
-}
 
 /* *** SYSTEM UPTIME *** */
 #refreshed-0 > #column4:nth-child(1){
@@ -119,9 +109,9 @@ h0 {
 #item4 > div:before {
         display: inline-block;
 	font-family: "FontAwesome";
-	font-size: 48px;
+	font-size: 36px;
         float: right;
-	height: 48px;
+	height: 36px;
 	margin: 0px 0px 5px 5px;
 }
 #item5 > div:before {

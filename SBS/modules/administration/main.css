@@ -1,38 +1,17 @@
-.table td, .table th {
-        border: none;
-}
-
-.main .flex-container {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.administration-buttons {
-        display: inline-block;
-        width: 160px;
-        height: 100px;
-        background-color: #434857;
-        color: #fff;
-        border-radius: 5px;
-	margin: 5px;
+.admin-buttons {
+	display: inline-block;
+	width: 160px;
+	height: 100px;
 	text-align: center;
+	border-radius: 4px;
+	padding: 5px;
+	margin: 0px 5px 5px 0px;
 }
-
-.administration-buttons:hover {
-	background-color: #1997c6;
-	text-decoration: none !important;
+.admin-buttons:before {
+	font-size: 48px;
 }
-
-.administration-buttons img,
-.administration-buttons br
+.admin-buttons img,
+.admin-buttons br
 {
 	display: none;
 }
-
-.administration-buttons:before {
-        font-family: 'FontAwesome';
-        display: block;
-        margin-top: 5px;
-        font-size: 40px;
-}
-

@@ -1,14 +1,26 @@
 $(document).ready(function() {
 
+	/* *** Login Page remove Table *** */
+	var homepages = ['/', '/index.php'];
+	if (homepages.indexOf(window.location.pathname) >= 0) {
+		$('.main').html($('.bloc').html());
+	}
+
+	/* *** Remove CSS Files *** */
+	$('link[href="css/global.css"]').remove();
+	$('link[href="js/bootstrap/css/bootstrap-combined.min.css"]').remove();
+
 	/* *** Several Class and Style Stuff *** */
 	var inputs = $('input, textarea, select').not(':input[type=button], :input[type=submit], :input[type=reset], :input[type=radio], :input[type=checkbox], :input[type=image]');
 	$(inputs).addClass('form-control').removeAttr('style');
-	$('button, :input[type=button], :input[type=submit], :input[type=reset]').addClass('btn').addClass('btn-sm').addClass('btn-secondary');
+	$('button, :input[type=button], :input[type=submit], :input[type=reset]').addClass('btn').addClass('btn-sm').addClass('btn-primary');
+	$('.monitorbutton, .administration-buttons').addClass('btn-primary');
+	$('.administration-buttons').removeClass('administration-buttons').addClass('admin-buttons');
 	$('form').addClass('form-group');
-	$('table').addClass('table').addClass('table-sm').removeAttr('style');
+	$('table').addClass('table').addClass('table-sm').addClass('table-striped').removeAttr('style');
 	$('tr').css("background-color", "");
 	$('input').css("width", "");
-	$('tfoot').removeAttr('style');
+	$('tfoot, input').removeAttr('style');
 	$('tfoot .bloc').removeClass('bloc');
 
 	/* *** MENU *** */

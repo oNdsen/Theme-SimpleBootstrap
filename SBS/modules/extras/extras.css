@@ -3,6 +3,12 @@
 b:not(:first-of-type){
 	float: right;
 }
+b.label {
+	font-size: 12px;
+	font-weight: normal;
+	padding: 5px;
+	margin: 0px 5px;
+}
 .btn,
 .badge {
 	margin: 0px 5px !important;
@@ -16,15 +22,17 @@ b:not(:first-of-type){
 .content {
 	height: 30px;
 	line-height: 30px;
+	padding: 4px;
 }
 .content:nth-child(even) {
 	background-color: rgba(40, 42, 49, 0.3) !important;
 }
 .badge {
-	font-size: 100% !important;
 	font-weight: normal !important;
-	line-height: 20px !important;
 }
 .fa {
 	margin-left: 5px;
+}
+.dragbox-content input[type="checkbox"] {
+    margin-right: 5px;
 }
