@@ -1,10 +1,32 @@
 b {
 	font-weight: normal !important;
 }
-/*.progress {
-	border-bottom: 1px solid rgba(67, 72, 87, 0.4) !important;
-	background-color: rgba(26, 28, 34, 0.6) !important;
-}*/
+.progress {
+        background: none !important;
+        height: auto !important;
+        display: block;
+	margin-bottom: 0px !important;
+}
+.progress-bar {
+	width: 100% !important;
+	background: none !important;
+}
+.progress-bar > canvas
+{
+        height: 60px !important;
+        width: 60px !important;
+}
+.load-container {
+	text-align: center;
+	margin-bottom: 5px;
+}
+#refreshed-0 > #column4:nth-child(2) .load-container {
+        display: inline-block;
+	width: 24%;
+}
+.load-container b {
+	display: block;
+}
 
 h0 {
 	clear: both;
@@ -34,6 +56,13 @@ h0 {
 .column .placeholder {
 	background: #1a1c22;
 	margin: 20px;
+}
+
+@media only screen and (max-width: 991px){
+	#column4 {
+		float: none !important;
+		width: 100% !important;
+	}
 }
 
 .dragbox h4 .configure {

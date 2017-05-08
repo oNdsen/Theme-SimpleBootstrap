@@ -12,6 +12,8 @@ $(document).ready(function() {
 		var newSize = $(this).text().replace('[', '').replace(']', '')
 		$(this).text(newSize);
 	});
-	//$('.size').addClass('badge').addClass('badge-default');
 	$('.size').addClass('btn').addClass('btn-xs').addClass('btn-default');
+
+	$('th:last-of-type').css('width', '150px');
+	$('tr:last-of-type > td[colspan="2"]').removeAttr('colspan').attr('colspan', 3);
 });

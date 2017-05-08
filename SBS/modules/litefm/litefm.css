@@ -9,25 +9,12 @@
 .operations-button
 {
 	display: inline-block;
-	width: 110px;
-	line-height: 25px;
-	background-color: #434857;
-	border-radius: 4px;
-	margin: 0px 5px 5px 0px;
-	float: left;
-	color: #fff;
-	font-size: 12px;
-	padding: 0px 5px;
-}
-.operations-button:hover {
-	color: #fff;
-	cursor: pointer;
-	background-color: #1997c6;
+	margin-right: 5px;
 }
 .operations-button:before {
 	font-family: FontAwesome;
 	display: inline-block;
-	margin: 0px 5px;
+	margin-right: 2px;
 }
 .operations-button img {
 	display: none;

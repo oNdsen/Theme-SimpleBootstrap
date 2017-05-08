@@ -37,8 +37,7 @@ h0, h1, h2, h3, h4, h5, h6 {
 h1, h2, h3, h4, h5, h6 {
 	border-bottom: 1px solid #434857;
 }
-
-.logo {
+.logo{
         padding: 20px;
 }
 h4.collapse {
@@ -48,7 +47,8 @@ h4.collapse {
         padding: 10px;
 }
 .col.footer {
-        background-color: rgba(26, 28, 34, 0.8);
+        //background-color: rgba(26, 28, 34, 0.8);
+	background-color: rgba(25,151,198,0.5);
         padding: 40px;
         margin-top: 40px;
 }
@@ -116,47 +116,52 @@ label {
 fieldset.infoBox {
 	margin-right: 10px;
 }
-
+th {
+	font-weight: 400 !important;
+	text-transform: uppercase !important;
+}
 
 /* *** Button Fix *** */
 button { -webkit-appearance: button; }
 #server_icon,
-button
+button,
+input[name="empty_logger"]
 {
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(top, #1997c6 0, #126e90 100%);
-    background-image: -o-linear-gradient(top, #1997c6 0, #126e90 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1997c6), to(#126e90));
-    background-image: linear-gradient(to bottom, #1997c6 0, #126e90 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1997c6', endColorstr='#ff126e90', GradientType=0);
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-    background-repeat: repeat-x;
-    border-color: #116787;
-text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
-    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 1px 1px rgba(0,0,0,0.075);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 1px 1px rgba(0,0,0,0.075);
-padding: 5px 10px;
-    font-size: 12px;
-    line-height: 1.5;
-    border-radius: 3px;
-color: #fff;
-background-color:#126e90;
-    display: inline-block;
-    margin-bottom: 0;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-border: 1px solid #082f3e;
-    white-space: nowrap;
--webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	cursor: pointer;
+	background-image: -webkit-linear-gradient(top, #1997c6 0, #126e90 100%);
+	background-image: -o-linear-gradient(top, #1997c6 0, #126e90 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1997c6), to(#126e90));
+	background-image: linear-gradient(to bottom, #1997c6 0, #126e90 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1997c6', endColorstr='#ff126e90', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	background-repeat: repeat-x;
+	border-color: #116787;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 1px 1px rgba(0,0,0,0.075);
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+	color: #fff;
+	background-color:#126e90;
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	border: 1px solid #082f3e;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 button:hover,
-#server_icon:hover
+#server_icon:hover,
+input[name="empty_logger"]:hover
 {
     background-color: #126e90;
     background-position: 0 -15px;

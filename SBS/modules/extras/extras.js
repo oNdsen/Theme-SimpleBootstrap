@@ -3,7 +3,7 @@ $(document).ready(function() {
                 return text.replace(/\ - /g, '');
         });
 
-        $('[href^="#uninstall_"]').addClass('btn').addClass('btn-warning').addClass('btn-xs').removeAttr('style');
+        $('[href^="#uninstall_"]').addClass('btn').addClass('btn-danger').addClass('btn-xs').removeAttr('style');
         $('[href^="#remove_"]').addClass('btn').addClass('btn-danger').addClass('btn-xs').removeAttr('style');
 	$('[href^="#install_"]').addClass('btn').addClass('btn-success').addClass('btn-xs').removeAttr('style');
         $('[href^="?m=extras&searchForUpdates="]').addClass('btn').addClass('btn-primary').addClass('btn-xs').removeAttr('style');

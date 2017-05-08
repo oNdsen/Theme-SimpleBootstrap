@@ -7,6 +7,9 @@
 	font-size: 12px;
 	float: left;
 }
+.expand-child #server_icon {
+	width: auto;
+}
 .monitorbutton
 {
 	height: 90px;
