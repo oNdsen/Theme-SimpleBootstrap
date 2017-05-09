@@ -32,6 +32,9 @@ h0, h1, h2, h3, h4, h5, h6 {
 .logo{
         padding: 20px;
 }
+.btn {
+	margin: 2px;
+}
 h4.collapse {
         display: block !important;
 }
@@ -39,7 +42,6 @@ h4.collapse {
         padding: 10px;
 }
 .col.footer {
-        //background-color: rgba(26, 28, 34, 0.8);
 	background-color: rgba(25,151,198,0.5);
         padding: 40px;
         margin-top: 40px;
@@ -88,9 +90,16 @@ table:not(.online_servers) {
 .table .table {
 	background-color: inherit;
 }
+.table>thead>tr>th {
+	border-bottom: none;
+}
 
 label {
 	font-weight: normal;
+}
+.label-size {
+	font-size: 80%;
+	line-height: 1.5;
 }
 
 .tablesorter .header:hover {
@@ -111,6 +120,14 @@ fieldset.infoBox {
 th {
 	font-weight: 400 !important;
 	text-transform: uppercase !important;
+}
+
+.collapsible:hover {
+	cursor: pointer;
+}
+
+.expandme:hover {
+	background-color: rgba(67,72,87,0.6);
 }
 
 /* *** Button Fix *** */
@@ -144,7 +161,6 @@ input[name="empty_logger"]
 	vertical-align: middle;
 	-ms-touch-action: manipulation;
 	touch-action: manipulation;
-	border: 1px solid #082f3e;
 	white-space: nowrap;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -355,3 +371,21 @@ a:before,
 .monitorbutton.size:before { content: "\f115"; }
 .monitorbutton.getAutoUpdateLink:before { content: "\f0c1"; }
 .monitorButtonContainer [href^="?m=gamemanager&p=rsync_install"]:before { content: "\f0ed"; }
+
+
+
+
+
+/* *** Theme Styler - Dont remove anything below this Line or it will break the Sheet!!! *** */
+
+/* *** THEME STYLER *** */
+body {
+        background: url(../images/bg/default.jpg) no-repeat center center fixed;
+        background-color: #111215;
+}
+h1, h2, h3, h4, h5, h6 {
+        border-bottom: 1px solid #434857;
+}
+
+
+/* *** THEME STYLER END *** */

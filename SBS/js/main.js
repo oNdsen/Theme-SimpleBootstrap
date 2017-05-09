@@ -1,20 +1,26 @@
 $(document).ready(function() {
 
 	/* *** Parse Config File *** */
-	$.getJSON("themes/SBS/conf/theme.config", function(json) {
+	/*$.getJSON("themes/SBS/conf/theme.config", function(json) {
 		d = new Date();
 		if(json['style']=='light'){
 			$('head').append('<link rel="stylesheet" href="themes/SBS/css/main_light.css?' + d.getTime() + '" type="text/css" />');
 		}else{
 			$('head').append('<link rel="stylesheet" href="themes/SBS/css/main_dark.css?' + d.getTime() + '" type="text/css" />');
 		}
-	});
+	});*/
 
 	/* *** Login Page remove Table *** */
 	var homepages = ['/', '/index.php'];
 	if (homepages.indexOf(window.location.pathname) >= 0) {
 		$('.main').html($('.bloc').html());
 	}
+
+	/* *** Cutting Title *** */
+	/*var head_title = $('.logo h2').text();
+	var head_title_short = head_title.substring(0, head_title.lastIndexOf(" [") + 1);
+	$('.logo h2').text(head_title_short);*/
+	$('.logo h2').text($('.logo h2').text().substring(0, $('.logo h2').text().lastIndexOf(" [") + 1));
 
 	/* *** Remove CSS and JS Files *** */
 	$('link[href="css/global.css"]').remove();
@@ -29,7 +35,7 @@ $(document).ready(function() {
 	/* *** Several Class and Style Stuff *** */
 	var inputs = $('input, textarea, select').not('input[type=button], input[type="submit"], input[type="SUBMIT"], input[type=reset], input[type=radio], input[type=checkbox], input[type=image]');
 	$(inputs).addClass('form-control').removeAttr('style');
-	var buttons = $('button, input[type="button"], input[type="submit"], input[type="SUBMIT"], input[type="reset"], .redirectLink, [href^="?m=gamemanager&p=update&update=refresh"], .main [href="?m=modulemanager&p=update"], .main [href="?m=simple-billing&p=shop"]');
+	var buttons = $('button, input[type="button"], input[type="submit"], input[type="SUBMIT"], input[type="reset"], .redirectLink, [href^="?m=gamemanager&p=update&update=refresh"], .main [href="?m=modulemanager&p=update"], .main [href="?m=simple-billing&p=shop"], .main [href^="home.php?m=TS3Admin&changevServer"]');
 	$(buttons).addClass('btn').addClass('btn-sm').addClass('btn-primary');
 	$('.main [href^="?m=modulemanager&p=del&id="]').addClass('btn').addClass('btn-xs').addClass('btn-danger');
 	$('.main [href^="?m=modulemanager&p=add&module="]').addClass('btn').addClass('btn-xs').addClass('btn-success');
@@ -41,6 +47,8 @@ $(document).ready(function() {
 	$('input').css("width", "");
 	$('tfoot, input').removeAttr('style');
 	$('tfoot .bloc').removeClass('bloc');
+	$('.online').addClass('label').addClass('label-success').addClass('label-size');
+	$('.offline').addClass('label').addClass('label-danger').addClass('label-size');
 
 	/* *** MENU *** */
 	$('.menu ul[id^=submenu] span').each(function() {

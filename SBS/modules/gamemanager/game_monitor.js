@@ -7,5 +7,5 @@ $(document).ready(function(){
         });
 
 	$('table#servermonitor').wrap('<div class="table-responsive"/>');
-	$('table#servermonitor td > a').addClass('label').addClass('label-primary');
+	$('table#servermonitor td > a').addClass('label').addClass('label-primary').addClass('label-size');
 });

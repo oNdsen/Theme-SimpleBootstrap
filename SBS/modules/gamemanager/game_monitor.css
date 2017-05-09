@@ -73,10 +73,6 @@
 tr.maintr td:last-child {
         min-width: 330px;
 }
-#servermonitor > tbody > tr > td > a {
-	font-size: 85%;
-	line-height: 1.5;
-}
 #servermonitor .monitor-1 {
         float: left;
         width: calc(100% - 260px);
