@@ -5,4 +5,7 @@ $(document).ready(function(){
                         $(this).removeClass('loading');
                 });
         });
+
+	$('table#servermonitor').wrap('<div class="table-responsive"/>');
+	$('table#servermonitor td > a').addClass('label').addClass('label-primary');
 });

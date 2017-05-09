@@ -29,6 +29,10 @@
 .monitorbutton img {
 	display: none;
 }
+.monitorButtonContainer form {
+	clear: both;
+}
+
 #server_icon {
 	line-height: 25px;
         padding: 0px 5px;
@@ -47,7 +51,11 @@
 
 
 
-
+@media screen and (max-width: 767px){
+	.table-responsive>.table {
+		max-width: 800px;
+	}
+}
 
 
 .srvctrl td {
@@ -63,7 +71,11 @@
 	font-weight: normal !important;
 }
 tr.maintr td:last-child {
-        min-width: 320px;
+        min-width: 330px;
+}
+#servermonitor > tbody > tr > td > a {
+	font-size: 85%;
+	line-height: 1.5;
 }
 #servermonitor .monitor-1 {
         float: left;

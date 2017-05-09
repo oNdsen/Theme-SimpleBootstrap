@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+	/* *** Parse Config File *** */
+	$.getJSON("themes/SBS/conf/theme.config", function(json) {
+		d = new Date();
+		if(json['style']=='light'){
+			$('head').append('<link rel="stylesheet" href="themes/SBS/css/main_light.css?' + d.getTime() + '" type="text/css" />');
+		}else{
+			$('head').append('<link rel="stylesheet" href="themes/SBS/css/main_dark.css?' + d.getTime() + '" type="text/css" />');
+		}
+	});
+
 	/* *** Login Page remove Table *** */
 	var homepages = ['/', '/index.php'];
 	if (homepages.indexOf(window.location.pathname) >= 0) {
@@ -12,7 +22,7 @@ $(document).ready(function() {
 	$('link[href="js/bootstrap/css/bootstrap-combined.min.css"]').remove();
 
 	/* *** Removing Chars from Links *** */
-        $('a').each(function(){
+        $('a, a span').each(function(){
                 $(this).html($(this).html().replace('[','').replace(']',''));
         });
 

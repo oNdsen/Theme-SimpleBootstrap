@@ -6,10 +6,13 @@ b {
         height: auto !important;
         display: block;
 	margin-bottom: 0px !important;
+	box-shadow: none !important;
 }
 .progress-bar {
 	width: 100% !important;
 	background: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
 }
 .progress-bar > canvas
 {
@@ -100,7 +103,7 @@ h0 {
 .online_servers td {
 	border-radius: 4px;
 	padding: 3px 10px !important;
-	border: none;
+	border-top: none !important;
 }
 .online_servers a
 {
