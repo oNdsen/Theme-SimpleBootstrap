@@ -42,7 +42,8 @@ h4.collapse {
         padding: 10px;
 }
 .col.footer {
-	background-color: rgba(25,151,198,0.5);
+	//background-color: rgba(25,151,198,0.5);
+	background-color: rgba(67,72,87,0.6);
         padding: 40px;
         margin-top: 40px;
 }
@@ -166,6 +167,7 @@ input[name="empty_logger"]
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	border: 1px solid transparent;
 }
 button:hover,
 #server_icon:hover,
@@ -190,16 +192,19 @@ input[name="empty_logger"]:hover
 {
         border-bottom: 1px solid #23282e;
 }
+.menu > ul > li > ul > li:first-of-type {
+	border-top: 1px solid #23282e;
+}
 
-.menu ul,
-.menu li {
+.menu ul {
         list-style: none;
         padding: 0px;
         margin: 0px;
         line-height: 35px;
         cursor: pointer;
-        background-color: rgba(26, 28, 34, 0.6);
+	background-color: rgba(26, 28, 34, 0.2);
 }
+.menu > ul { background-color: rgba(26, 28, 34, 0.5); }
 
 .menu ul#administration,
 .menu ul#administration li,
@@ -208,10 +213,11 @@ input[name="empty_logger"]:hover
         line-height: 25px;
 }
 
-.menu li:hover,
+.menu a:hover,
 .menu .ready{
         background-color: rgba(25, 151, 198, 0.8) !important;
         text-decoration: none;
+	transition: all 0.1s;
 }
 [class$="menu_link_selected"] {
 	background-color: #1686af !important;
@@ -236,7 +242,6 @@ input[name="empty_logger"]:hover
 .menu ul > li > ul a
 {
         font-size: 12px;
-        background-color: rgba(26, 28, 34, 0.6);
         padding-left: 16px;
 }
 
