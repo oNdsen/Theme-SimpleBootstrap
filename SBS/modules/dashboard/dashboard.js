@@ -6,6 +6,8 @@ $(document).ready(function() {
 	$('.one_fourth').addClass('col-xs-12').addClass('col-md-3');
 	$('.one_two').addClass('col-xs-12').addClass('col-md-6');
 
+	$('.dragbox-content img').remove();
+
 	animateProgressBars();
 });
 

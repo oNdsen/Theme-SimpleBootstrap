@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import url("font-awesome.min.css");
 
+body {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 ::-webkit-scrollbar-button{
         display: none;
 }
@@ -42,7 +49,6 @@ h4.collapse {
         padding: 10px;
 }
 .col.footer {
-	//background-color: rgba(25,151,198,0.5);
 	background-color: rgba(67,72,87,0.6);
         padding: 40px;
         margin-top: 40px;
@@ -173,8 +179,8 @@ button:hover,
 #server_icon:hover,
 input[name="empty_logger"]:hover
 {
-    background-color: #126e90;
-    background-position: 0 -15px;
+	background-color: #126e90;
+	background-position: 0 -15px;
 }
 
 
@@ -187,8 +193,7 @@ input[name="empty_logger"]:hover
         margin-bottom: 20px;
 }
 .menu ul[id^=submenu] > li > a,
-.menu [class$="menu_link"],
-.menu [class$="menu_link_selected"]
+.menu [class*="menu_link"]
 {
         border-bottom: 1px solid #23282e;
 }
@@ -385,11 +390,19 @@ a:before,
 
 /* *** THEME STYLER *** */
 body {
-        background: url(../images/bg/default.jpg) no-repeat center center fixed;
-        background-color: #111215;
+        background: url(../images/bg/blur_1.jpg) no-repeat center center fixed;
+        background-color: #2b343b;
 }
 h1, h2, h3, h4, h5, h6 {
-        border-bottom: 1px solid #434857;
+        border-bottom: 1px solid #9fa1a9;
+}
+h0 a
+{
+	color: #272c32;
+}
+h0 a:hover
+{
+        color: #fff;
 }
 
 

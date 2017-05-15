@@ -68,6 +68,9 @@ h0 {
 	}
 }
 
+.dragbox {
+	margin-bottom: 10px;
+}
 .dragbox h4 .configure {
 	width: 30px;
 	height: 30px;
