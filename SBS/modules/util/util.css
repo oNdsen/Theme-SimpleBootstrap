@@ -33,3 +33,9 @@
 	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
+.ui-tabs .ui-tabs-panel {
+	border: 1px solid #22252f !important;
+	background-color: rgba(67,72,87,0.3) !important
+;
+}
