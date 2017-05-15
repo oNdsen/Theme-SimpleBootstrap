@@ -34,11 +34,8 @@
 }
 
 #server_icon {
-	line-height: 25px;
+	line-height: 0.5 !important;
         padding: 0px 5px;
-}
-#server_icon:first-of-type {
-        margin-left: 10px;
 }
 #server_icon div {
 	display: inline-block;
@@ -48,13 +45,8 @@
 	margin-top: 0px;
 	margin-right: 2px;
 }
-
-
-
-@media screen and (max-width: 767px){
-	.table-responsive>.table {
-		max-width: 800px;
-	}
+#server_icon img {
+	display: none;
 }
 
 
@@ -69,9 +61,6 @@
 }
 .srvctrl b {
 	font-weight: normal !important;
-}
-tr.maintr td:last-child {
-        min-width: 330px;
 }
 #servermonitor .monitor-1 {
         float: left;
@@ -146,3 +135,21 @@ tr.maintr td:last-child {
 .ts3_viewer b {
 	font-weight: normal;
 }
+
+
+tr.maintr td:last-child {
+	padding: 3px 8px 3px;
+}
+@media screen and (min-width: 767px){
+	tr.maintr td:last-child {
+	        width: 330px;
+	}
+}
+
+
+@media screen and (max-width: 766px){
+        .table-responsive>.table {
+                max-width: 800px;
+        }
+}
+
