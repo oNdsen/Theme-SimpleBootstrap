@@ -81,6 +81,13 @@ $(document).ready(function() {
 		$('link[href="modules/TS3Admin/webinterface.css"]').remove();
 	}
 
+	$('.image-tip').each(function(){
+		var tip_text = $(this).find('.tip').html();
+		$(this).replaceWith('<i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="'+tip_text+'"></i>');
+	});
+	$('[data-toggle="tooltip"]').each(function(){
+		$(this).tooltip();
+	});
 
 	$("span.versionInfo").click(function(e){
 		handleVersionClick();

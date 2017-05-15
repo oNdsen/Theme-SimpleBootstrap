@@ -31,6 +31,12 @@ body {
         height: 3px;
 }
 
+/*.center.table,
+center > form > table
+{
+	max-width: 800px !important;
+	margin: auto;
+}*/
 
 h0, h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
@@ -136,6 +142,11 @@ th {
 .expandme:hover {
 	background-color: rgba(67,72,87,0.6);
 }
+
+[data-toggle="tooltip"] {
+	font-size: 130%;
+}
+
 
 /* *** Button Fix *** */
 button { -webkit-appearance: button; }
