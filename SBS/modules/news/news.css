@@ -1,0 +1,11 @@
+.panel-title {
+	padding-bottom: 0px;
+	border-bottom: none;
+}
+:not(.news-row) .news-row {
+	background-color: rgba(67,72,87,0.3);
+	border: 1px solid #22252f;
+	min-height: 50px;
+	padding: 5px;
+	margin-bottom: 5px;
+}
