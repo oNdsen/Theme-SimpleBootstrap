@@ -1,7 +1,4 @@
 $(document).ready(function() {
-	$('.success').addClass('alert').addClass('alert-success');
-	$('.failure').addClass('alert').addClass('alert-danger');
-
 	$('.main [href^="?m=fast_download"]').addClass('btn').addClass('btn-sm').addClass('btn-primary');
 	$('input[name="delete"], input[name="stop_fastdl"]').removeClass('btn-primary').addClass('btn-danger');
 
