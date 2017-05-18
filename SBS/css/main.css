@@ -314,6 +314,12 @@ input[name="empty_logger"]:hover
 .menu a > span {
 	white-space: nowrap;
 }
+.menu .tree ul:not(.opened) .tree:before {
+	visibility: hidden;
+}
+.menu .tree ul.opened .tree:before {
+        visibility: visible;
+}
 
 
 
