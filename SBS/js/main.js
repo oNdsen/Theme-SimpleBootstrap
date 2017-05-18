@@ -1,30 +1,10 @@
 $(document).ready(function() {
 
-	/* *** Parse Config File *** */
-	/*$.getJSON("themes/SBS/conf/theme.config", function(json) {
-		d = new Date();
-		if(json['style']=='light'){
-			$('head').append('<link rel="stylesheet" href="themes/SBS/css/main_light.css?' + d.getTime() + '" type="text/css" />');
-		}else{
-			$('head').append('<link rel="stylesheet" href="themes/SBS/css/main_dark.css?' + d.getTime() + '" type="text/css" />');
-		}
-	});*/
-
-	/* *** Login Page remove Table *** */
-	var homepages = ['/', '/index.php'];
-	if (homepages.indexOf(window.location.pathname) >= 0) {
-		$('.main').html($('.bloc').html());
-	}
-
 	/* *** Cutting Title *** */
-	/*var head_title = $('.logo h2').text();
-	var head_title_short = head_title.substring(0, head_title.lastIndexOf(" [") + 1);
-	$('.logo h2').text(head_title_short);*/
 	$('.logo h2').text($('.logo h2').text().substring(0, $('.logo h2').text().lastIndexOf(" [") + 1));
 
 	/* *** Remove CSS and JS Files *** */
-	$('link[href="css/global.css"]').remove();
-	$('script[src="js/global.js"]').remove();
+	$('link[href="css/global.css"], script[src="js/global.js"]').remove();
 	$('link[href="js/bootstrap/css/bootstrap-combined.min.css"]').remove();
 
 	/* *** Removing Chars from Links *** */
@@ -47,8 +27,13 @@ $(document).ready(function() {
 	$('input').css("width", "");
 	$('tfoot, input').removeAttr('style');
 	$('tfoot .bloc').removeClass('bloc');
+
 	$('.online').addClass('label').addClass('label-success').addClass('label-size');
 	$('.offline').addClass('label').addClass('label-danger').addClass('label-size');
+        $('.success').addClass('alert').addClass('alert-success');
+        $('.failure:not(b)').addClass('alert').addClass('alert-danger');
+
+	$('.g-recaptcha').attr('data-theme','dark');
 
 	/* *** MENU *** */
 	$('.menu ul[id^=submenu] span').each(function() {
@@ -82,7 +67,7 @@ $(document).ready(function() {
 	}
 
 	$('.image-tip').each(function(){
-		var tip_text = $(this).find('.tip').html();
+		var tip_text = $(this).find('.tip').text();
 		$(this).replaceWith('<i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="'+tip_text+'"></i>');
 	});
 	$('[data-toggle="tooltip"]').each(function(){
@@ -96,6 +81,74 @@ $(document).ready(function() {
 	$(".getAutoUpdateLink").click(function(e){
 		showSteamUpdateLink($(this));
 	});
+
+
+
+        /* *** Login Page Mod *** */
+	if(/^(\/|\/index\.php)$/i.test(location.pathname)){
+                //$('.main').html($('.bloc').html());
+
+	if($('form[name="login_form"]').length > 0) {
+		if ($('.g-recaptcha').length > 0) {
+			var recaptcha = '<div class="text-center">'+$('[name="login_form"] tr:nth-child(4) td:last-child').html()+'</div>';
+		}else{
+			var recaptcha = "";
+		}
+                var title = $('.main h4').text();
+                var user = $('[name="login_form"] tr:nth-child(2) td:first-child').text().replace(':', '');
+                var pass = $('[name="login_form"] tr:nth-child(3) td:first-child').text().replace(':', '');
+                var forgot = $('[href="?m=lostpwd"]').text();
+                var lbtn = $('[name="login"]').val();
+                var optns = $('[name="lang"]').html();
+
+                var new_form = '\
+		<div class="login-container">\
+        		<h3>'+title+'</h3>\
+        		<form action="index.php" name="login_form" method="post" class="form-group">\
+        		        <input type="text" name="ulogin" id="ulogin" class="form-control" placeholder="'+user+'">\
+				<input type="password" name="upassword" class="form-control" placeholder="'+pass+'">\
+                		<select name="lang" onchange="this.form.submit();" class="form-control">'+optns+'</select>\
+				'+recaptcha+'\
+                		<input type="submit" name="login" value="'+lbtn+'" class="btn btn-primary btn-block btn-sm">\
+        		</form>\
+        		<a href="?m=lostpwd">'+forgot+'</a>\
+		</div>';
+
+                $('.main').empty().html(new_form);
+	}
+
+		$('.menu ul:first-of-type').addClass('nav').addClass('navbar-nav');
+		$('.menu [class*="selected"]').parent('li').addClass('active');
+		$('.menu a').removeClass();
+
+		var navigation = $('.navigation .menu').html();
+
+		var new_navigation = '\
+		<div class="col-xs-12 main col-md-12">\
+		<nav class="navbar navbar-default">\
+			<div class="container-fluid">\
+				<div class="navbar-header">\
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">\
+					<span class="sr-only">Toggle navigation</span>\
+					<span class="icon-bar"></span>\
+					<span class="icon-bar"></span>\
+					<span class="icon-bar"></span>\
+					</button>\
+					<a class="navbar-brand">Navigation</a>\
+				</div>\
+				<div id="navbar" class="navbar-collapse collapse">\
+					'+navigation+'\
+				</div>\
+			</div>\
+		</nav>\
+		</div>';
+
+		$('.navigation').remove();
+		$('.main').removeClass('col-md-10').addClass('col-md-12');
+		$('body > .container-fluid > .row:first-of-type').empty().html(new_navigation);
+
+        }
+
 
 });
 
