@@ -26,6 +26,9 @@
 {
 	cursor: pointer !important;
 }
+.monitorbutton:hover {
+	background-position: 0 -90px !important;
+}
 .monitorbutton img {
 	display: none;
 }
@@ -127,9 +130,11 @@
 
 #servermonitor .monitor-2 .srvctrl td:first-of-type a:hover:before {
         color: #5cb85c;
+//	color: #3e8f3e;
 }
 #servermonitor .monitor-2 .srvctrl td:last-of-type a:hover:before {
         color: #d9534f;
+//	color: #b92c28;
 }
 
 .ts3_viewer b {
@@ -153,3 +158,16 @@ tr.maintr td:last-child {
         }
 }
 
+#server_icon[class^="action-stop"] {
+	background-image: -webkit-linear-gradient(top, #d9534f 0, #c12e2a 100%);
+	background-image: -o-linear-gradient(top, #d9534f 0, #c12e2a 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d9534f), to(#c12e2a));
+	background-image: linear-gradient(to bottom, #d9534f 0, #c12e2a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	background-repeat: repeat-x;
+	border-color: #b92c28;
+}
+#server_icon[class^="action-stop"]:hover {
+	background-color: #c12e2a;
+}
