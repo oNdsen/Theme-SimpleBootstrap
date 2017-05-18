@@ -1,4 +1,4 @@
-# Simple Bootstrap v4 Theme for Open Game Panel
+# Simple Bootstrap Theme for Open Game Panel
 
 Install Instructions:
  * Download the [latest Release](https://github.com/oNdsen/OGP_SBS/archive/master.zip)
