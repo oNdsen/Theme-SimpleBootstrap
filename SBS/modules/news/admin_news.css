@@ -46,3 +46,6 @@
 	position: absolute;
 	top: 15px;
 }
+h3 {
+	border-bottom: none !important;
+}

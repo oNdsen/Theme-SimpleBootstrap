@@ -26,6 +26,8 @@ $(document).ready(function() {
 		$(this).replaceWith('<a href="'+$(this).attr('href')+'" class="btn btn-sm btn-danger pull-right">'+$(this).find('img').attr('alt')+'</a>');
 	});
 
+	$('.success').removeClass('success').addClass('label').addClass('label-success');
+	$('.failure').removeClass('failure').addClass('label').addClass('label-danger');
 });
 
 
