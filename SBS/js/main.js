@@ -13,6 +13,11 @@ $(document).ready(function() {
         });
 
 	/* *** Several Class and Style Stuff *** */
+	$('.main').bind("DOMSubtreeModified",function(){
+		$('tr').css("background-color", "");
+		$('input').css("width", "");
+	});
+
 	var inputs = $('input, textarea, select').not('input[type=button], input[type="submit"], input[type="SUBMIT"], input[type=reset], input[type=radio], input[type=checkbox], input[type=image]');
 	$(inputs).addClass('form-control').removeAttr('style');
 	var buttons = $('button, input[type="button"], input[type="submit"], input[type="SUBMIT"], input[type="reset"], .redirectLink, [href^="?m=gamemanager&p=update&update=refresh"], .main [href="?m=modulemanager&p=update"], .main [href="?m=simple-billing&p=shop"], .main [href^="home.php?m=TS3Admin&changevServer"], .main [href^="?m=gamemanager&p=game_monitor&home_id="]');
@@ -23,8 +28,6 @@ $(document).ready(function() {
 	$('.administration-buttons').removeClass('administration-buttons').addClass('admin-buttons');
 	$('form').addClass('form-group');
 	$('table').addClass('table').addClass('table-sm').addClass('table-striped').removeAttr('style');
-	$('tr').css("background-color", "");
-	$('input').css("width", "");
 	$('tfoot, input').removeAttr('style');
 	$('tfoot .bloc').removeClass('bloc');
 
