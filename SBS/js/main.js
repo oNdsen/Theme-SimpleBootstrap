@@ -15,7 +15,7 @@ $(document).ready(function() {
 	/* *** Several Class and Style Stuff *** */
 	var inputs = $('input, textarea, select').not('input[type=button], input[type="submit"], input[type="SUBMIT"], input[type=reset], input[type=radio], input[type=checkbox], input[type=image]');
 	$(inputs).addClass('form-control').removeAttr('style');
-	var buttons = $('button, input[type="button"], input[type="submit"], input[type="SUBMIT"], input[type="reset"], .redirectLink, [href^="?m=gamemanager&p=update&update=refresh"], .main [href="?m=modulemanager&p=update"], .main [href="?m=simple-billing&p=shop"], .main [href^="home.php?m=TS3Admin&changevServer"]');
+	var buttons = $('button, input[type="button"], input[type="submit"], input[type="SUBMIT"], input[type="reset"], .redirectLink, [href^="?m=gamemanager&p=update&update=refresh"], .main [href="?m=modulemanager&p=update"], .main [href="?m=simple-billing&p=shop"], .main [href^="home.php?m=TS3Admin&changevServer"], .main [href^="?m=gamemanager&p=game_monitor&home_id="]');
 	$(buttons).addClass('btn').addClass('btn-sm').addClass('btn-primary');
 	$('.main [href^="?m=modulemanager&p=del&id="]').addClass('btn').addClass('btn-xs').addClass('btn-danger');
 	$('.main [href^="?m=modulemanager&p=add&module="]').addClass('btn').addClass('btn-xs').addClass('btn-success');
@@ -31,9 +31,17 @@ $(document).ready(function() {
 	$('.online').addClass('label').addClass('label-success').addClass('label-size');
 	$('.offline').addClass('label').addClass('label-danger').addClass('label-size');
         $('.success').addClass('alert').addClass('alert-success');
+	$('td b.success').removeClass('alert').removeClass('alert-success');
         $('.failure:not(b)').addClass('alert').addClass('alert-danger');
 
 	$('.g-recaptcha').attr('data-theme','dark');
+
+	$('img[src="modules/addonsmanager/loading.gif"]').replaceWith('<i class="fa fa-spinner fa-pulse fa-3x fa-fw loadinggif"></i>');
+
+	$('.main img').error(function () {
+		$(this).unbind("error").attr("src", "themes/SBS/images/image_not_found.png").removeAttr('height');
+	});
+
 
 	/* *** MENU *** */
 	$('.menu ul[id^=submenu] span').each(function() {
@@ -60,6 +68,55 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+
+	/* *** Pagination *** */
+        /* *** Pagination *** */
+        $('#pagination').each(function(){
+                $(this).replaceWith('<ul class="pagination">'+$(this).html()+'</ul>');
+                var pm = $('.pagination');
+
+                var ps = $(pm).find('.watchLogger_paginationStart');
+                var pp = $(pm).find('.watchLogger_paginationPages');
+                var pe = $(pm).find('.watchLogger_paginationEnd');
+
+                if($(ps).length){
+                        if($(ps).find('span').length){ console.log('divider!'); }
+                        $(ps).find('a').each(function(){
+                                var tl = $(this).attr('href');
+                                var tc = $(this).text();
+                                $(pm).append('<li><span><a href="'+tl+'">'+tc+'</a></li>');
+                        });
+                        if($(ps).find('span').length){
+                                $(pm).append('<li><span>...</span></li>');
+                        }
+                        $(ps).remove();
+                }
+                $(pp).find('a').each(function(){
+                        var tl = $(this).attr('href');
+                        var tc = $(this).text().replace('[','').replace(']','');
+                        if($(this).hasClass('watchLogger_currentPageLink')){
+                                $(pm).append('<li class="active"><span><a href="'+tl+'">'+tc+'</a></li>');
+                        }else{
+                                $(pm).append('<li><span><a href="'+tl+'">'+tc+'</a></li>');
+                        }
+                });
+                $(pp).remove();
+
+                if($(pe).length){
+                        if($(pe).find('span').length){
+                                $(pm).append('<li><span>...</span></li>');
+                        }
+                        $(pe).find('a').each(function(){
+                                var tl = $(this).attr('href');
+                                var tc = $(this).text();
+                                $(pm).append('<li><span><a href="'+tl+'">'+tc+'</a></li>');
+                        });
+                        $(pe).remove();
+                }
+
+        });
+
 
 	/* *** Removing CSS File from FTP Page *** */
 	if(window.location.href.indexOf("home.php?m=TS3Admin") != -1 ){

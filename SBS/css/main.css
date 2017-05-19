@@ -52,6 +52,14 @@ center > form > table
         -webkit-transform-origin: 0 0;
 }
 
+.loadinggif {
+	font-size: 100px;
+}
+
+.redirectLink {
+	margin-bottom: 20px;
+}
+
 h0, h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
         padding-bottom: 10px;
@@ -178,6 +186,9 @@ th {
 	font-size: 130%;
 }
 
+.pagination>li>span>a {
+	color: #fff;
+}
 
 /* *** Button Fix *** */
 button { -webkit-appearance: button; }
