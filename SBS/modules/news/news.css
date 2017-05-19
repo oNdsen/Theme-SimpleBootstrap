@@ -2,10 +2,18 @@
 	padding-bottom: 0px;
 	border-bottom: none;
 }
-:not(.news-row) .news-row {
+:not(.news-row) .news-row:nth-child(1),
+.news-two-third
+{
 	background-color: rgba(67,72,87,0.3);
 	border: 1px solid #22252f;
 	min-height: 50px;
 	padding: 5px;
 	margin-bottom: 5px;
+	overflow: hidden;
+}
+.news-img {
+	display: inline-block;
+	float: right;
+	margin-left: 10px;
 }
