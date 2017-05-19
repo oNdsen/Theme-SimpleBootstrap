@@ -7,5 +7,8 @@ $(document).ready(function(){
         });
         $('.main h2:nth-of-type(2)').remove();
         $('.main .administration-table:nth-of-type(2)').remove();
+
+	$('.main .administration-table [href^="?m=administration&p=iframe&external_link="]').addClass('btn-primary').addClass('admin-buttons');
+	$('.main .administration-table [href^="?m=administration&p=iframe&external_link="]').wrapInner('<div></div>');
 });
 

@@ -28,6 +28,6 @@ $(document).ready(function() {
 
         $('b[style="color:green;"').addClass('label').addClass('label-success').css("color", "");
         $('b[style="color:red;"').addClass('label').addClass('label-danger').css("color", "");
-
+	$('b[style="color:orange;"').addClass('label').addClass('label-warning').css("color", "");
 });
 
