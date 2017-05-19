@@ -375,12 +375,12 @@ a:before,
         content: "Loading..." !important;
 }
 
-
 /* Default */
 .menu a > span:before,
 .administration-table a:before { content: "\f192"; }
 
 /* Defined */
+.menu ul[id^="submenu"] span:before { display: none; }
 .menu [href="?m=dashboard&p=dashboard"] > span:before,
 .administration-table [href="?m=dashboard&p=dashboard"]:before { content: "\f0e4"; }
 .menu [href="?m=gamemanager&p=game_monitor"] > span:before { content: "\f108"; }
@@ -452,7 +452,6 @@ a:before,
 .monitorbutton.getAutoUpdateLink:before { content: "\f0c1"; }
 .monitorButtonContainer [href^="?m=gamemanager&p=rsync_install"]:before { content: "\f0ed"; }
 .administration-table [href^="?m=administration&p=iframe&external_link="]:before { content: "\f0c1"; }
-
 
 
 
