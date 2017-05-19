@@ -66,6 +66,16 @@ h0 {
 		float: none !important;
 		width: 100% !important;
 	}
+	.col-md-3,
+	.col-md-6,
+	.bloc
+	{
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	#refreshed-0 > #column4:first-of-type {
+		margin-left: 0px !important;
+	}
 }
 
 .dragbox {
