@@ -13,9 +13,13 @@ $(document).ready(function() {
         });
 
 	/* *** Several Class and Style Stuff *** */
-	$('.main').bind("DOMSubtreeModified",function(){
-		$('tr').css("background-color", "");
+	$(window).load(function () {
+		$('tr, td, div').css("background-color", "");
+		$('div').css("border", "").css("height", "");
 		$('input').css("width", "");
+		if($.trim($("div").text()) == "") {
+			$(this).remove();
+		}
 	});
 
 	var inputs = $('input, textarea, select').not('input[type=button], input[type="submit"], input[type="SUBMIT"], input[type=reset], input[type=radio], input[type=checkbox], input[type=image]');
