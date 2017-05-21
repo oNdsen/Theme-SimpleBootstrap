@@ -187,7 +187,9 @@ tr.maintr td:last-child {
 	color: #fff !important;
 }
 
-#server_icon[class^="action-stop"] {
+#server_icon[class^="action-stop"],
+.ui-dialog-titlebar-close
+{
 	background-image: -webkit-linear-gradient(top, #d9534f 0, #c12e2a 100%);
 	background-image: -o-linear-gradient(top, #d9534f 0, #c12e2a 100%);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d9534f), to(#c12e2a));
@@ -197,7 +199,9 @@ tr.maintr td:last-child {
 	background-repeat: repeat-x;
 	border-color: #b92c28;
 }
-#server_icon[class^="action-stop"]:hover {
+#server_icon[class^="action-stop"]:hover,
+.ui-dialog-titlebar-close:hover
+{
 	background-color: #c12e2a;
 }
 
@@ -216,3 +220,30 @@ tr.maintr td:last-child {
 	background-position: 0 -15px;
 }
 
+
+.ui-widget-content {
+	background-color: transparent !important;
+	border-color: transparent !important;
+}
+.ui-dialog {
+	background-color: rgba(26, 28, 34, 0.8) !important;
+	border: 1px solid #23282e !important;
+}
+.ui-draggable .ui-dialog-titlebar {
+	background-color: #1997c6;
+	border: none;
+	color: #fff;
+}
+input[name="map-image"] {
+	color: #fff;
+	outline: none;
+}
+.ui-widget-content {
+	height: auto !important;
+}
+button.ui-dialog-titlebar-close {
+	font-family: FontAwesome !important;
+}
+button.ui-dialog-titlebar-close:before {
+	content: "\f00d";
+}
