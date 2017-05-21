@@ -344,8 +344,6 @@ a:before,
 }
 
 .menu .tree:before {
-        //display: inline-block;
-        //float: right;
 	position: absolute;
 	right: 15px;
         content: "\f104";
@@ -361,7 +359,7 @@ a:before,
 {
         display: block;
         font-size: 40px;
-        margin-bottom: -5px;
+        //margin-bottom: -5px;
 }
 .loading:before {
         content: "\f021" !important;
@@ -374,7 +372,9 @@ a:before,
 
 /* Default */
 .menu a > span:before,
-.administration-table a:before { content: "\f192"; }
+.administration-table a:before,
+.monitorButtonContainer a:before
+{ content: "\f192"; }
 
 /* Defined */
 .menu ul[id^="submenu"] span:before { display: none; }
@@ -386,6 +386,7 @@ a:before,
 .menu [href^="?m=gamemanager&p=log"] > span:before,
 .monitorButtonContainer [href^="?m=gamemanager&p=log"]:before { content: "\f1da"; }
 .menu [href="?m=addonsmanager&p=addons_manager"] > span:before,
+.monitorButtonContainer [href^="?m=addonsmanager&p=user_addons"]:before,
 .administration-table [href="?m=addonsmanager&p=addons_manager"]:before { content: "\f12e"; }
 .menu [href="?m=extras"] > span:before,
 .administration-table [href="?m=extras"]:before{ content: "\f1e6"; }

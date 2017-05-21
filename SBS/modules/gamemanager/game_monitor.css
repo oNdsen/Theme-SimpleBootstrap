@@ -14,9 +14,11 @@
 {
 	height: 90px;
 	text-align: center;
+	vertical-align: middle;
 }
 .monitorbutton span {
 	line-height: 14px;
+	max-height: 28px;
 }
 .monitorbutton.size {
 	font-size: 12px !important;
