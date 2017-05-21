@@ -35,6 +35,7 @@ $(document).ready(function() {
 	$('table').addClass('table').addClass('table-sm').addClass('table-striped').removeAttr('style');
 	$('tfoot, input').removeAttr('style');
 	$('tfoot .bloc').removeClass('bloc');
+	$('.main input[name="remove"]').removeClass('btn-primary').addClass('btn-danger');
 
 	$('.online').addClass('label').addClass('label-success').addClass('label-size');
 	$('.offline').addClass('label').addClass('label-danger').addClass('label-size');

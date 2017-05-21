@@ -190,7 +190,6 @@ th {
 /* *** Button Fix *** */
 button { -webkit-appearance: button; }
 #server_icon,
-button,
 input[name="empty_logger"]
 {
 	cursor: pointer;
@@ -225,7 +224,6 @@ input[name="empty_logger"]
 	user-select: none;
 	border: 1px solid transparent;
 }
-button:hover,
 #server_icon:hover,
 input[name="empty_logger"]:hover
 {
@@ -282,9 +280,10 @@ input[name="empty_logger"]:hover
         display: block;
         color: #fff;
         font-size: 14px;
-        padding: 0px 10px;
+        padding: 0px 18px 0px 10px;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	white-space: nowrap;
 }
 
 .menu #submenu_1 a {

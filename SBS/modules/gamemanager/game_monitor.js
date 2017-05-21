@@ -15,6 +15,13 @@ $(document).ready(function(){
 
 	$('.main').addClass('main-content');
 
+        $('#refreshed-0').bind("DOMSubtreeModified",function(){
+                $(this).find('.upload-image').addClass('btn').addClass('btn-sm').addClass('btn-primary');
+		$(this).find('.player_monitor').css('border', '').addClass('table').addClass('table-sm').addClass('table-striped');
+
+	});
+
+
 	/*$('img[src="images/stop.png"]').replaceWith('<i class="fa fa-stop-circle-o" aria-hidden="true" id="action-stop"></i>');
 	$('img[src="images/start.png"]').replaceWith('<i class="fa fa-play-circle" aria-hidden="true" id="action-start"></i>');
 	$('img[src="images/restart.png"]').replaceWith('<i class="fa fa-refresh" aria-hidden="true" id="action-restart"></i>');*/
