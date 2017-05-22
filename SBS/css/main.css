@@ -31,10 +31,6 @@ body {
         height: 3px;
 }
 
-.navbar {
-	margin-top: 15px;
-}
-
 .g-recaptcha {
 	-ms-zoom: 0.75;
         -moz-transform: scale(0.75);
@@ -86,7 +82,8 @@ h4.collapse {
         padding: 10px;
 }
 .col.footer {
-	background-color: rgba(67,72,87,0.6);
+//	background-color: rgba(67,72,87,0.6);
+	background-color: rgba(26, 28, 34, 0.5);
         padding: 40px;
         margin-top: 40px;
 }
@@ -233,6 +230,34 @@ input[name="empty_logger"]:hover
 
 
 /* ***** MENU ***** */
+@media (min-width: 992px) {
+	.navbar-header {
+		display: none;
+	}
+	.navigation {
+		padding-right: 0px;
+	}
+}
+.navbar-header {
+	background-color: rgba(26, 28, 34, 0.5);
+	border-radius: 4px;
+}
+.navbar-brand {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+.navbar-toggle {
+	margin: 8px;
+}
+.navbar.navbar-default {
+        margin-top: 15px;
+}
+.navbar:not(.navbar-default) {
+	margin: 0px !important;
+}
+
+
 .menu {
         margin-bottom: 20px;
 }
@@ -276,7 +301,7 @@ input[name="empty_logger"]:hover
         display: block;
         color: #fff;
         font-size: 14px;
-        padding: 0px 18px 0px 10px;
+        padding: 0px 10px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
@@ -340,7 +365,7 @@ a:before,
 
 .menu .tree:before {
 	position: absolute;
-	right: 15px;
+	right: 0px;
         content: "\f104";
         margin-right: 10px;
 	font-size: 80%;
