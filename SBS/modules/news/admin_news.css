@@ -491,11 +491,6 @@ form#main ol li  {
 	form#main textarea {
 		width: 65%;
 	}
-	form#main input:not([type=submit]):focus,
-	form#main textarea:focus 
-	{
-		background: #ffffff;
-	}
 
 	form#main input[type=radio]
 	 {
