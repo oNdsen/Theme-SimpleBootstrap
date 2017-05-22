@@ -8,7 +8,10 @@ $(document).ready(function() {
 
 	$('.dragbox-content img').remove();
 
-	animateProgressBars();
+	var url = "themes/SBS/js/radialIndicator.js";
+	$.getScript( url, function() {
+		animateProgressBars();
+	});
 });
 
 function animateProgressBars(){
