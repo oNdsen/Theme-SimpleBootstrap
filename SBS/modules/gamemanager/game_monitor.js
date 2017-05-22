@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 	$('.main').addClass('main-content');
 
-        $('#refreshed-0').bind("DOMSubtreeModified",function(){
+        $('[id^="refreshed"]').bind("DOMSubtreeModified",function(){
                 $(this).find('.upload-image').addClass('btn').addClass('btn-sm').addClass('btn-primary');
 		$(this).find('.player_monitor').css('border', '').addClass('table').addClass('table-sm').addClass('table-striped');
 

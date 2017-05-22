@@ -180,6 +180,9 @@ th {
 	color: #fff;
 }
 
+.online { color: #5cb85c; }
+.offline { color: #d9534f; }
+
 /* *** Button Fix *** */
 button { -webkit-appearance: button; }
 #server_icon,
