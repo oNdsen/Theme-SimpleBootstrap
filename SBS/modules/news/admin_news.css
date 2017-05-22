@@ -165,7 +165,7 @@ padding:0px 10px 10px 10px;
     margin:0;
 }
 .fixed-height{
-    //min-height: 85px;
+    min-height: 85px;
 }
 .db-wrap {
     background:#ffffff;
@@ -380,9 +380,28 @@ left: 48%
     max-width: 100%;
     height: auto
 }
+.news-form-control {
+    display: block;
+    width: 96%;
+    height: 30px;
+    padding: 5px 0px 5px 10px;
+    font-size: 14px;
+    line-height: 1.52857143;
+    color: #3a3f51;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #dde6e9;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
 .news-form-control-mce {
     min-height: 350px;
-    overflow: scroll;
+    height: auto;
+    overflow: auto;
 }
 .form-field  {
     border:1px solid #aaaaaa;
@@ -393,9 +412,6 @@ left: 48%
     height:28px;
     min-width:200px;
     font-size:14px;
-}
-.underline-link {
-    text-decoration:underline;
 }
 fieldset {
     padding: 0;
@@ -443,11 +459,8 @@ form#main ol li  {
 
 @media (min-width: 768px) {
 	form#main {
-		//padding: 25px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
-		border-radius: 5px;
-		//background:#ffffff;
 	}
 	form#main ol li 
 	{
@@ -478,9 +491,29 @@ form#main ol li  {
 	form#main textarea {
 		width: 65%;
 	}
+	form#main input:not([type=submit]):focus,
+	form#main textarea:focus 
+	{
+		background: #ffffff;
+	}
+
 	form#main input[type=radio]
 	 {
 		float: left;
 		margin-right: 5px;
 	}
+}
+
+
+h3 {
+	border-bottom: none !important;
+	text-transform: none !important;
+}
+.nicEdit-panelContain,
+.nicEdit-pane
+{
+	color: #000;
+}
+.autoheight {
+	height: auto !important;
 }

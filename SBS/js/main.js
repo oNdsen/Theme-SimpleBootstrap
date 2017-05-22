@@ -15,8 +15,8 @@ $(document).ready(function() {
 
 	/* *** Several Class and Style Stuff *** */
 	$(window).load(function () {
-		$('tr, td, div').css("background-color", "");
-		$('div').css("border", "").css("height", "");
+		$('tr, td, div:not([class*="nicEdit"])').css("background-color", "");
+		$('div:not([class*="nicEdit"])').css("border", "").css("height", "");
 		$('input').css("width", "");
 		if($.trim($("div").text()) == "") {
 			$(this).remove();
@@ -35,7 +35,7 @@ $(document).ready(function() {
 	$('table').addClass('table').addClass('table-sm').addClass('table-striped').removeAttr('style');
 	$('tfoot, input').removeAttr('style');
 	$('tfoot .bloc').removeClass('bloc');
-	$('.main input[name="remove"]').removeClass('btn-primary').addClass('btn-danger');
+	$('.main input[name="remove"], .main input[name="removeJob"]').removeClass('btn-primary').addClass('btn-danger');
 
 	$('.online').addClass('label').addClass('label-success').addClass('label-size');
 	$('.offline').addClass('label').addClass('label-danger').addClass('label-size');

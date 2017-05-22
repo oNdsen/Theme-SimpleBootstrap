@@ -1,11 +1,15 @@
 $(document).ready(function() {
         $('.table-wrap').removeClass('table-wrap');
-	$('.news-btn').addClass('btn').addClass('btn-primary').addClass('btn-sm');
+	$('.news-btn, [href="?m=news&p=admin_news&page=permissions"], .underline-link').addClass('btn').addClass('btn-primary').addClass('btn-sm');
 	$('#description').addClass('form-control');
 
-        create_button('[href$="&page=permissions"]', 'btn-danger');
-        create_button('[href$="&page=settings"]', 'btn-warning');
-        create_button('[href$="&page=add"]', 'btn-success');
+	$(window).load(function () {
+		$('.nicEdit-main').css('outline', 'none').parent('div').addClass('form-control').addClass('autoheight').css('padding', '2px');
+	});
+
+        create_button('.news-row [href$="&page=permissions"]', 'btn-danger');
+        create_button('.news-row [href$="&page=settings"]', 'btn-warning');
+        create_button('.news-row [href$="&page=add"]', 'btn-success');
 
         /* *** Replace UL / LI with Table *** */
         var ul = $(".main ol");
@@ -28,6 +32,9 @@ $(document).ready(function() {
 
         $('.success').removeClass('success').addClass('label').addClass('label-success');
         $('.failure').removeClass('failure').addClass('label').addClass('label-danger');
+
+	$('.nicEdit-main').addClass('form-control');
+
 });
 
 

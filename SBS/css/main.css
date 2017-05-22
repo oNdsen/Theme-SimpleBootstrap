@@ -45,10 +45,6 @@ body {
         -webkit-transform-origin: 0 0;
 }
 
-.clearfix {
-	height: 20px;
-}
-
 .loadinggif {
 	font-size: 100px;
 }
