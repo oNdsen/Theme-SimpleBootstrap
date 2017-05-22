@@ -16,7 +16,7 @@ $(document).ready(function() {
 	/* *** Several Class and Style Stuff *** */
 	$(window).load(function () {
 		$('tr, td, div:not([class*="nicEdit"])').css("background-color", "");
-		$('div:not([class*="nicEdit"])').css("border", "").css("height", "");
+		$('div:not([class*="nicEdit"], #refreshed-0)').css("border", "").css("height", "");
 		$('input').css("width", "");
 		if($.trim($("div").text()) == "") {
 			$(this).remove();
@@ -143,7 +143,6 @@ $(document).ready(function() {
 
         /* *** Login Page Mod *** */
 	if(/^(\/|\/index\.php)$/i.test(location.pathname)){
-                //$('.main').html($('.bloc').html());
 
 	if($('form[name="login_form"]').length > 0) {
 		if ($('.g-recaptcha').length > 0) {
@@ -205,6 +204,5 @@ $(document).ready(function() {
 		$('body > .container-fluid > .row:first-of-type').empty().html(new_navigation);
 
         }
-
 
 });
