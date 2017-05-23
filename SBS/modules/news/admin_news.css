@@ -155,11 +155,21 @@
     clear: both
 }
 .drag_img {
-float:left;
-height:165px;
-margin:10px;
-background:#ffffff;
-padding:0px 10px 10px 10px;
+	float:left;
+	height:140px;
+	margin:10px;
+	background:rgba(67,72,87,0.3);
+	border:1px solid #22252f;
+	border-radius:4px;
+	padding: 5px;
+}
+.drag_img > br {
+	display: none;
+}
+.drag_img > .btn {
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }
 .no-margin {
     margin:0;
@@ -236,9 +246,9 @@ th {
 .table>thead>tr>th {
     padding: 8px;
     line-height: 1.52857143;
-    vertical-align: top;
+    vertical-align: middle !important;
     border-top: 1px solid #eee
-
+    text-align: center;
 }
 .table>thead>tr>th {
     vertical-align: bottom;
