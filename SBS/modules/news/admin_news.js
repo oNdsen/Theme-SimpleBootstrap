@@ -35,6 +35,7 @@ $(document).ready(function() {
 
 	$('.nicEdit-main').addClass('form-control');
 
+	$('.main [href^="home.php?m=news&p=admin_news&page=edit&id="]').addClass('btn').addClass('btn-sm').addClass('btn-primary');
 });
 
 

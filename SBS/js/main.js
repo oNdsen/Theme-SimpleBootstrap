@@ -73,8 +73,8 @@ $(document).ready(function() {
 	$('.g-recaptcha').attr('data-theme','dark');
 
 	$('img[src="modules/addonsmanager/loading.gif"]').replaceWith('<i class="fa fa-spinner fa-pulse fa-3x fa-fw loadinggif"></i>');
-	$('img[src="images/online.png"]').replaceWith('<i class="fa fa-circle online" aria-hidden="true"></i>');
-	$('img[src="images/offline.png"]').replaceWith('<i class="fa fa-circle offline" aria-hidden="true"></i>');
+	$('img[src="images/online.png"], img[src$="icon_online.gif"]').replaceWith('<i class="fa fa-circle online" aria-hidden="true"></i>');
+	$('img[src="images/offline.png"], img[src$="icon_offline.gif"]').replaceWith('<i class="fa fa-circle offline" aria-hidden="true"></i>');
 
 	$('.main img').error(function () {
 		$(this).unbind("error").attr("src", "themes/SBS/images/image_not_found.png").removeAttr('height');
