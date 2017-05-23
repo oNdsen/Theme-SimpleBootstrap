@@ -183,6 +183,28 @@ th {
 .online { color: #5cb85c; }
 .offline { color: #d9534f; }
 
+input[type="checkbox"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-o-appearance: none;
+        font-family: FontAwesome;
+	border: 1px solid #22252f;
+	width: 16px;
+	height: 16px;
+	background-color: rgba(67,72,87,0.3) !important;
+	border-radius: 3px;
+	display: inline-block;
+	outline: none;
+	margin: 0px 4px;
+}
+input[type=checkbox]:before {
+        content: "\f00c";
+	color: transparent;
+}
+input[type=checkbox]:checked:before {
+	color: #fff;
+}
+
 /* *** Button Fix *** */
 button { -webkit-appearance: button; }
 #server_icon,
@@ -226,8 +248,6 @@ input[name="empty_logger"]:hover
 	background-color: #126e90;
 	background-position: 0 -15px;
 }
-
-
 
 
 
