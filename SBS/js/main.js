@@ -24,6 +24,10 @@ $(document).ready(function() {
 
 	});
 
+	$('input[src="modules/administration/images/remove.gif"]').each(function(){
+//		$(this).replaceWith('<button type="submit" class="btn btn-xs btn-danger" name="'+$(this).attr('name')+'" onsubmit="submit-form();"><i class="fa fa-times"></i></button>');
+	});
+
 	$('input[type="file"]').each(function(){
 		$(this).css('display', 'none');
 		$(this).wrap('<div class="input-group">').wrap('<label class="input-group-btn">').wrap('<span class="btn btn-sm btn-primary btn-file">');
@@ -156,6 +160,8 @@ $(document).ready(function() {
 		$('link[href="modules/TS3Admin/webinterface.css"]').remove();
 	}
 
+
+	/* *** Tooltip *** */
 	$('.image-tip').each(function(){
 		var tip_text = $(this).find('.tip').text();
 		$(this).replaceWith('<i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="'+tip_text+'"></i>');
@@ -163,7 +169,6 @@ $(document).ready(function() {
 	$('[data-toggle="tooltip"]').each(function(){
 		$(this).tooltip();
 	});
-
 
 
         /* *** Login Page Mod *** */
@@ -198,7 +203,7 @@ $(document).ready(function() {
                 $('.main').empty().html(new_form);
 	}
 
-		$('.menu ul:first-of-type').addClass('nav').addClass('navbar-nav');
+/*		$('.menu ul:first-of-type').addClass('nav').addClass('navbar-nav');
 		$('.menu [class*="selected"]').parent('li').addClass('active');
 		$('.menu a').removeClass();
 
@@ -224,9 +229,21 @@ $(document).ready(function() {
 		</nav>\
 		</div>';
 
-		$('.navigation').remove();
+		$('.navigation').remove();*/
+
 		$('.main').removeClass('col-md-10').addClass('col-md-12');
-		$('body > .container-fluid > .row:first-of-type').empty().html(new_navigation);
+//		$('body > .container-fluid > .row:first-of-type').empty().html(new_navigation);
+
+		$('nav.navbar').addClass('navbar-default');
+		//$('.menu > ul').appendTo('#navbar');
+		//$('.menu-bg').remove();
+		$('#navbar ul').addClass('nav').addClass('navbar-nav');
+		$('#navbar [class*="selected"]').parent('li').addClass('active');
+
+		$('.navigation').removeClass('col-md-2').addClass('col-md-12').css('padding-right','15px')
+		$('.collapse').css('padding','0px 5px');
+		$('.menu').css('margin-bottom','0px');
+		$('body > .container-fluid > .row:first-of-type').remove();
 
         }
 
