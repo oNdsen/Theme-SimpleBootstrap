@@ -11,6 +11,7 @@ $(document).ready(function(){
 	$('.main .administration-table [href^="?m=administration&p=iframe&external_link="]').addClass('btn-primary').addClass('admin-buttons');
 	$('.main .administration-table [href^="?m=administration&p=iframe&external_link="]').wrapInner('<div></div>');
 
+	$('.main button[name="restore"]').removeClass('btn-primary').addClass('btn-danger');
 
 	/* *** Buttons Order adding TR's *** */
 	var td = $('.main > table:last-of-type td');

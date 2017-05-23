@@ -11,7 +11,8 @@ $(document).ready(function() {
 		$(this).find('[href$="&submit=delete_mod"]').addClass('btn').addClass('btn-xs').addClass('btn-danger');
 		$(this).find('[href^="?m=user_games&p=install_cmds&home_id="]').addClass('btn').addClass('btn-xs').addClass('btn-primary');
 		$(this).find('.set_options').addClass('btn').addClass('btn-sm').addClass('btn-primary');
-
+		$(this).find('input[type="submit"]').addClass('btn').addClass('btn-sm').addClass('btn-primary');
 		$(this).find('[id^="mod_cfg_id_"] > td').find('br').remove();
+
 	});
 });

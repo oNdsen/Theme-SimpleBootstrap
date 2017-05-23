@@ -21,9 +21,32 @@ $(document).ready(function() {
 		if($.trim($("div").text()) == "") {
 			$(this).remove();
 		}
+
 	});
 
-	var inputs = $('input, textarea, select').not('input[type=button], input[type="submit"], input[type="SUBMIT"], input[type=reset], input[type=radio], input[type=checkbox], input[type=image]');
+	$('input[type="file"]').each(function(){
+		$(this).css('display', 'none');
+		$(this).wrap('<div class="input-group">').wrap('<label class="input-group-btn">').wrap('<span class="btn btn-sm btn-primary btn-file">');
+		$(this).parent('span').parent('label').parent('.input-group').append('<input type="text" class="form-control" readonly="">');
+		$(this).parent('span').prepend('Browse...');
+	});
+	$(document).on('change', ':file', function() {
+		var input = $(this),
+		numFiles = input.get(0).files ? input.get(0).files.length : 1,
+		label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+		input.trigger('fileselect', [numFiles, label]);
+	});
+	$(':file').on('fileselect', function(event, numFiles, label) {
+		var input = $(this).parents('.input-group').find(':text'),
+		log = numFiles > 1 ? numFiles + ' files selected' : label;
+		if( input.length ) {
+			input.val(log);
+		} else {
+			if( log ) alert(log);
+		}
+	});
+
+	var inputs = $('input, textarea, select').not('input[type=button], input[type="submit"], input[type="SUBMIT"], input[type=reset], input[type=radio], input[type=checkbox], input[type=image], input[type="file"]');
 	$(inputs).addClass('form-control').removeAttr('style');
 	var buttons = $('button, input[type="button"], input[type="submit"], input[type="SUBMIT"], input[type="reset"], .redirectLink, [href^="?m=gamemanager&p=update&update=refresh"], .main [href="?m=modulemanager&p=update"], .main [href="?m=simple-billing&p=shop"], .main [href^="home.php?m=TS3Admin&changevServer"], .main [href^="?m=gamemanager&p=game_monitor&home_id="]');
 	$(buttons).addClass('btn').addClass('btn-sm').addClass('btn-primary');
