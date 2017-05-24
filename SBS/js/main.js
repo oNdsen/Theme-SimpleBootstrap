@@ -24,9 +24,10 @@ $(document).ready(function() {
 
 	});
 
-//	$('input[src="modules/administration/images/remove.gif"]').each(function(){
-//		$(this).replaceWith('<button type="submit" class="btn btn-xs btn-danger" name="'+$(this).attr('name')+'" onsubmit="submit-form();"><i class="fa fa-times"></i></button>');
-//	});
+	$('.magnificContentsDiv').bind("DOMSubtreeModified",function(){
+		$('.updateLink').attr('disabled','disabled').addClass('form-control').css('display','inline-block');
+		$('.copyButton').addClass('btn').addClass('btn-sm').addClass('btn-primary');
+	});
 
 	$('input[type="file"]').each(function(){
 		$(this).css('display', 'none');
