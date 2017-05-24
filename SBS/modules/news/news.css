@@ -146,7 +146,6 @@ border-radius: 5px;
 .img-bottom {
     text-align: center; /* center  horizontally */
     vertical-align: middle; /* center  vertically */
-    float: none !important;
 }
 .final-image {
 	padding-top: 10px;
@@ -173,14 +172,12 @@ border-radius: 5px;
     overflow:hidden;
     padding: 5px 0px;
 }
-.news-two-third {
-    width: 66%;
-}
 .news-half {
     width: 50%;
 }
 .news-one-third {
     width: 33%;
+	margin: 0px 0px 15px 15px;
 }
 .news-img {
     max-width: 250px;
