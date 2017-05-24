@@ -24,9 +24,9 @@ $(document).ready(function() {
 
 	});
 
-	$('input[src="modules/administration/images/remove.gif"]').each(function(){
+//	$('input[src="modules/administration/images/remove.gif"]').each(function(){
 //		$(this).replaceWith('<button type="submit" class="btn btn-xs btn-danger" name="'+$(this).attr('name')+'" onsubmit="submit-form();"><i class="fa fa-times"></i></button>');
-	});
+//	});
 
 	$('input[type="file"]').each(function(){
 		$(this).css('display', 'none');
@@ -235,8 +235,6 @@ $(document).ready(function() {
 //		$('body > .container-fluid > .row:first-of-type').empty().html(new_navigation);
 
 		$('nav.navbar').addClass('navbar-default');
-		//$('.menu > ul').appendTo('#navbar');
-		//$('.menu-bg').remove();
 		$('#navbar ul').addClass('nav').addClass('navbar-nav');
 		$('#navbar [class*="selected"]').parent('li').addClass('active');
 
