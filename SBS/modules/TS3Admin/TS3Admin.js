@@ -4,5 +4,7 @@ $(document).ready(function() {
 
         $('[name="stopvServer"]').removeClass('btn-primary').addClass('btn-danger');
 
+	$('.edit, .main [href^="home.php?m=TS3Admin"], .main [href*="home.php?m=TS3Admin&token"], .main [href="home.php?m=TS3Admin&liveview"]').addClass('btn').addClass('btn-xs').addClass('btn-primary');
+
 });
 
