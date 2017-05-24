@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-	$('.main').css('display','none');
 	$(window).load(function () {
 		if ($('.g-recaptcha').length > 0) {
 			var recaptcha = '<div class="text-center">'+$('[name="loginForm"] tr:last-child td:last-child').html()+'</div>';
@@ -35,7 +34,6 @@ $(document).ready(function() {
                 </div>';
 
 		$('.main').empty().html(new_form);
-		$('.main').css('display','');
 	});
 
 });
