@@ -31,14 +31,16 @@ body {
         height: 3px;
 }
 
-.g-recaptcha {
-	-ms-zoom: 0.75;
-        -moz-transform: scale(0.75);
-        -moz-transform-origin: 0 0;
-        -o-transform: scale(0.75);
-        -o-transform-origin: 0 0;
-        -webkit-transform: scale(0.75);
-        -webkit-transform-origin: 0 0;
+@media (max-width: 360px) {
+	.g-recaptcha {
+		-ms-zoom: 0.95;
+	        -moz-transform: scale(0.95);
+	        -moz-transform-origin: 0 0;
+	        -o-transform: scale(0.95);
+	        -o-transform-origin: 0 0;
+	        -webkit-transform: scale(0.95);
+	        -webkit-transform-origin: 0 0;
+	}
 }
 
 .btn-file {

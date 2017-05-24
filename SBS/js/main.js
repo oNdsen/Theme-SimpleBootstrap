@@ -56,6 +56,7 @@ $(document).ready(function() {
 	$(buttons).addClass('btn').addClass('btn-sm').addClass('btn-primary');
 	$('.main [href^="?m=modulemanager&p=del&id="]').addClass('btn').addClass('btn-xs').addClass('btn-danger');
 	$('.main [href^="?m=modulemanager&p=add&module="]').addClass('btn').addClass('btn-xs').addClass('btn-success');
+
 	$('.monitorbutton, .administration-buttons').addClass('btn-primary');
 	$('.administration-buttons').removeClass('administration-buttons').addClass('admin-buttons');
 	$('form').addClass('form-group');
@@ -174,65 +175,103 @@ $(document).ready(function() {
         /* *** Login Page Mod *** */
 	if(/^(\/|\/index\.php)$/i.test(location.pathname)){
 
-	if($('form[name="login_form"]').length > 0) {
-		if ($('.g-recaptcha').length > 0) {
-			var recaptcha = '<div class="text-center">'+$('[name="login_form"] tr:nth-child(4) td:last-child').html()+'</div>';
-		}else{
-			var recaptcha = "";
+		if($('form[name="login_form"]').length > 0) {
+			if ($('.g-recaptcha').length > 0) {
+				var recaptcha = '<div class="text-center">'+$('[name="login_form"] tr:nth-child(4) td:last-child').html()+'</div>';
+			}else{
+				var recaptcha = "";
+			}
+        	        var title = $('.main h4').text();
+        	        var user = $('[name="login_form"] tr:nth-child(2) td:first-child').text().replace(':', '');
+        	        var pass = $('[name="login_form"] tr:nth-child(3) td:first-child').text().replace(':', '');
+        	        var forgot = $('[href="?m=lostpwd"]').text();
+        	        var lbtn = $('[name="login"]').val();
+        	        var optns = $('[name="lang"]').html();
+
+	                var new_form = '\
+			<div class="login-container">\
+	        		<h3>'+title+'</h3>\
+        			<form action="index.php" name="login_form" method="post" class="form-group">\
+        			        <input type="text" name="ulogin" id="ulogin" class="form-control" placeholder="'+user+'">\
+					<input type="password" name="upassword" class="form-control" placeholder="'+pass+'">\
+        	        		<select name="lang" onchange="this.form.submit();" class="form-control">'+optns+'</select>\
+					'+recaptcha+'\
+        	        		<input type="submit" name="login" value="'+lbtn+'" class="btn btn-primary btn-block btn-sm">\
+        			</form>\
+        			<a href="?m=lostpwd">'+forgot+'</a>\
+			</div>';
+
+	                $('.main').empty().html(new_form);
 		}
-                var title = $('.main h4').text();
-                var user = $('[name="login_form"] tr:nth-child(2) td:first-child').text().replace(':', '');
-                var pass = $('[name="login_form"] tr:nth-child(3) td:first-child').text().replace(':', '');
-                var forgot = $('[href="?m=lostpwd"]').text();
-                var lbtn = $('[name="login"]').val();
-                var optns = $('[name="lang"]').html();
 
-                var new_form = '\
-		<div class="login-container">\
-        		<h3>'+title+'</h3>\
-        		<form action="index.php" name="login_form" method="post" class="form-group">\
-        		        <input type="text" name="ulogin" id="ulogin" class="form-control" placeholder="'+user+'">\
-				<input type="password" name="upassword" class="form-control" placeholder="'+pass+'">\
-                		<select name="lang" onchange="this.form.submit();" class="form-control">'+optns+'</select>\
-				'+recaptcha+'\
-                		<input type="submit" name="login" value="'+lbtn+'" class="btn btn-primary btn-block btn-sm">\
-        		</form>\
-        		<a href="?m=lostpwd">'+forgot+'</a>\
-		</div>';
+		/* *** Lost Password Form *** */
+		if(window.location.href.indexOf('?m=lostpwd') > -1) {
+			//alert('bla');
 
-                $('.main').empty().html(new_form);
-	}
+			var title = $('.main h2').text();
 
-/*		$('.menu ul:first-of-type').addClass('nav').addClass('navbar-nav');
-		$('.menu [class*="selected"]').parent('li').addClass('active');
-		$('.menu a').removeClass();
+			if ($('.main > strong').length > 0) {
+				/* *** Error Message *** */
 
-		var navigation = $('.navigation .menu').html();
+				var err = $('.main strong').text();
+	                        var err_msg = $('.main p').text();
 
-		var new_navigation = '\
-		<div class="col-xs-12 main col-md-12">\
-		<nav class="navbar navbar-default">\
-			<div class="container-fluid">\
-				<div class="navbar-header">\
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">\
-					<span class="sr-only">Toggle navigation</span>\
-					<span class="icon-bar"></span>\
-					<span class="icon-bar"></span>\
-					<span class="icon-bar"></span>\
-					</button>\
-					<a class="navbar-brand">Navigation</a>\
-				</div>\
-				<div id="navbar" class="navbar-collapse collapse">\
-					'+navigation+'\
-				</div>\
-			</div>\
-		</nav>\
-		</div>';
+				var new_form = '\
+       	                	<div class="login-container">\
+	                                <h3>'+title+'</h3>\
+					<div class="alert alert-danger" role="alert"><strong>'+err+'</strong><p>'+err_msg+'</p></div>\
+					<a href="?m=lostpwd" class="btn btn-primary btn-sm"><< Back</a>\
+	                        </div>';
+			}else if ($('.main > p > b[style="color:red;"]').length > 0) {
+				/* *** Sent Password *** */
 
-		$('.navigation').remove();*/
+				var msgb = $('.main > p > b[style="color:red;"]').text();
+				$('.main > p > b[style="color:red;"]').remove();
+				var msg = $('.main > p').text();
+
+                                var new_form = '\
+                                <div class="login-container">\
+                                        <h3>'+title+'</h3>\
+                                        <div class="alert alert-success" role="alert"><p>'+msg+'</p><p>'+msgb+'</p></div>\
+                                        <a href="?m=lostpwd" class="btn btn-primary btn-sm"><< Back</a>\
+                                </div>';
+			}else{
+
+				if ($('.main td > p').length > 0) {
+					if($('.main td > p').attr('style')=='color: red;'){
+						var alert = '<div class="alert alert-danger" role="alert">';
+					}else{
+						var alert = '<div class="alert alert-success" role="alert">';
+					}
+					$('.main td > p').each(function() {
+						alert += '<p>'+$(this).text()+'</p>';
+					});
+					alert += '</div>';
+				} else {
+					var alert = "";
+				}
+
+			var email = $('.main label[for="email_address"]').text();
+                        var lbtn = $('td > [type="submit"]').val();
+                        var bbtn = $('[action="index.php"] > input[type="submit"]').val();
+
+                        var new_form = '\
+                        <div class="login-container">\
+                                <h3>'+title+'</h3>\
+				'+alert+'\
+                                <form action="?m=lostpwd" method="post" class="form-group">\
+					<input type="text" name="email_address" class="form-control" placeholder="Email">\
+                                        <input type="submit" name="login" value="'+lbtn+'" class="btn btn-primary btn-block btn-sm">\
+                                </form>\
+				<a href="index.php" class="btn btn-primary btn-sm">'+bbtn+'</a>\
+                        </div>';
+
+			}
+			$('.main').empty().html(new_form);
+		}
+
 
 		$('.main').removeClass('col-md-10').addClass('col-md-12');
-//		$('body > .container-fluid > .row:first-of-type').empty().html(new_navigation);
 
 		$('nav.navbar').addClass('navbar-default');
 		$('#navbar ul').addClass('nav').addClass('navbar-nav');
