@@ -2,10 +2,10 @@
 @import url("font-awesome.min.css");
 
 body {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
 }
 
 ::-webkit-scrollbar-button{
@@ -94,7 +94,7 @@ h0, h1, h2, h3, h4, h5, h6 {
 	margin-top: 0px;
 }
 
-.btn {
+.btn:not(span) {
 	margin: 2px;
 }
 h4.collapse {
@@ -201,6 +201,9 @@ th {
 
 .pagination>li>span>a {
 	color: #fff;
+	display: block;
+	height: 100%;
+	padding: 6px 12px;
 }
 
 .online { color: #5cb85c; }
@@ -334,7 +337,7 @@ button.mfp-close:focus {
 	font-weight: 300;
 }
 .navbar-toggle {
-	margin: 8px;
+	margin: 8px !important;
 }
 .navbar.navbar-default {
         margin-top: 15px;

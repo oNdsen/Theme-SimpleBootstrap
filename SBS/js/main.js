@@ -129,7 +129,7 @@ $(document).ready(function() {
                                 $(pm).append('<li><span><a href="'+tl+'">'+tc+'</a></li>');
                         });
                         if($(ps).find('span').length){
-                                $(pm).append('<li><span>...</span></li>');
+                                $(pm).append('<li><span><a>...</a></span></li>');
                         }
                         $(ps).remove();
                 }
@@ -146,7 +146,7 @@ $(document).ready(function() {
 
                 if($(pe).length){
                         if($(pe).find('span').length){
-                                $(pm).append('<li><span>...</span></li>');
+                                $(pm).append('<li><span><a>...</a></span></li>');
                         }
                         $(pe).find('a').each(function(){
                                 var tl = $(this).attr('href');
@@ -295,3 +295,4 @@ $(document).ready(function() {
         });
 
 });
+
