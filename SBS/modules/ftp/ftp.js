@@ -4,9 +4,11 @@ $(document).ready(function(){
                 $('iframe').load(function() {
 			$(this).contents().find("tr").removeAttr("onmouseover").removeAttr("onmouseout");
                         $(this).contents().find("body").addClass('ftp_iframe');
-                        $(this).contents().find("div").removeAttr("style");
+                        $(this).contents().find("div, input").removeAttr("style");
                         $(this).contents().find("table").removeAttr("style").removeAttr("colspan").addClass('table').addClass('table-sm').addClass('table-striped');
                         $(this).contents().find(".page > table > tbody > tr:nth-child(3)").remove();
+			$(this).contents().find('b[style="color:red;"]').removeAttr('style').addClass('alert').addClass('alert-danger');
+			$(this).contents().find('.table .table').addClass('inner-table');
 
                         $(this).contents().find('link').remove();
                         var main_css = '<link rel="stylesheet" type="text/css" href="../../themes/SBS/css/main.css">';

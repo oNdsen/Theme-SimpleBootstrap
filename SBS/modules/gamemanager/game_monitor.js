@@ -21,7 +21,6 @@ $(document).ready(function(){
 
 	});
 
-
 	/*$('img[src="images/stop.png"]').replaceWith('<i class="fa fa-stop-circle-o" aria-hidden="true" id="action-stop"></i>');
 	$('img[src="images/start.png"]').replaceWith('<i class="fa fa-play-circle" aria-hidden="true" id="action-start"></i>');
 	$('img[src="images/restart.png"]').replaceWith('<i class="fa fa-refresh" aria-hidden="true" id="action-restart"></i>');*/

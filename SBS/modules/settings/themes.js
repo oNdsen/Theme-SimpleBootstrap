@@ -50,13 +50,15 @@ $(document).ready(function() {
 
 $(window).load(function(){
         $('#del_custom_bg').click(function(){
-              $.get('themes/SBS/conf/write_conf.php',
-                        {del_custom_bg:'yes'},
-                        function(data){
-                                console.log(data);
-                        }
-                );
-                location.reload();
+		if(confirm('Are you sure you want to remove the Background Image?')){
+			$.get('themes/SBS/conf/write_conf.php',
+                        	{del_custom_bg:'yes'},
+                        	function(data){
+                        	        console.log(data);
+                        	}
+                	);
+                	location.reload();
+		}
         });
 
 	$(':file').on('fileselect', function(event, numFiles, label) {

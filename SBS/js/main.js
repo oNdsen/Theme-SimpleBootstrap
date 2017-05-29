@@ -7,7 +7,6 @@ $(document).ready(function() {
 
 	/* *** Remove CSS and JS Files *** */
 	$('link[href="css/global.css"]').remove();
-	//$('link[href="css/global.css"], script[src="js/global.js"]').remove();
 	$('link[href="js/bootstrap/css/bootstrap-combined.min.css"]').remove();
 
 	/* *** Removing Chars from Links *** */
@@ -55,10 +54,14 @@ $(document).ready(function() {
 
 	var inputs = $('input, textarea, select').not('input[type=button], input[type="submit"], input[type="SUBMIT"], input[type=reset], input[type=radio], input[type=checkbox], input[type=image], input[type="file"]');
 	$(inputs).addClass('form-control').removeAttr('style');
-	var buttons = $('button, input[type="button"], input[type="submit"], input[type="SUBMIT"], input[type="reset"], .redirectLink, [href^="?m=gamemanager&p=update&update=refresh"], .main [href="?m=modulemanager&p=update"], .main [href="?m=simple-billing&p=shop"], .main [href^="home.php?m=TS3Admin&changevServer"], .main [href^="?m=gamemanager&p=game_monitor&home_id="]');
+	var buttons = $('button, input[type="button"], input[type="submit"], input[type="SUBMIT"], input[type="reset"], .redirectLink, [href^="?m=gamemanager&p=update&update=refresh"], .main [href="?m=modulemanager&p=update"], .main [href="?m=simple-billing&p=shop"], .main [href^="home.php?m=TS3Admin&changevServer"], .main [href^="?m=gamemanager&p=game_monitor&home_id="], .serverIdToggle');
 	$(buttons).addClass('btn').addClass('btn-sm').addClass('btn-primary');
 	$('.main [href^="?m=modulemanager&p=del&id="]').addClass('btn').addClass('btn-xs').addClass('btn-danger');
 	$('.main [href^="?m=modulemanager&p=add&module="]').addClass('btn').addClass('btn-xs').addClass('btn-success');
+
+	$('em').each(function(){
+		$(this).replaceWith('<div class="label label-warning inline-block">'+$(this).html()+'</div>');
+	});
 
 	$('.monitorbutton, .administration-buttons').addClass('btn-primary');
 	$('.administration-buttons').removeClass('administration-buttons').addClass('admin-buttons');
@@ -80,7 +83,7 @@ $(document).ready(function() {
 	$('img[src="images/online.png"], img[src$="icon_online.gif"]').replaceWith('<i class="fa fa-circle online" aria-hidden="true"></i>');
 	$('img[src="images/offline.png"], img[src$="icon_offline.gif"]').replaceWith('<i class="fa fa-circle offline" aria-hidden="true"></i>');
 
-	$('.main img').error(function () {
+	$('.main img, .main input[type="image"]').error(function () {
 		$(this).unbind("error").attr("src", "themes/SBS/images/image_not_found.png").removeAttr('height');
 	});
 
@@ -166,12 +169,14 @@ $(document).ready(function() {
 
 
 	/* *** Tooltip *** */
-	$('.image-tip').each(function(){
-		var tip_text = $(this).find('.tip').text();
-		$(this).replaceWith('<i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="'+tip_text+'"></i>');
-	});
-	$('[data-toggle="tooltip"]').each(function(){
-		$(this).tooltip();
+	$(window).load(function(){
+		$('.image-tip').each(function(){
+			var tip_text = $(this).find('.tip').text();
+			$(this).replaceWith('<i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="'+tip_text+'"></i>');
+		});
+		$('[data-toggle="tooltip"]').each(function(){
+			$(this).tooltip();
+		});
 	});
 
 

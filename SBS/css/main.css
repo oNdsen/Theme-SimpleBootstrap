@@ -43,6 +43,10 @@ body {
 	}
 }
 
+input[type="image"]{
+	margin-right: 5px;
+}
+
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -199,13 +203,6 @@ th {
 	font-size: 130%;
 }
 
-.pagination>li>span>a {
-	color: #fff;
-	display: block;
-	height: 100%;
-	padding: 6px 12px;
-}
-
 .online { color: #5cb85c; }
 .offline { color: #d9534f; }
 
@@ -281,9 +278,9 @@ input[name="empty_logger"]:hover
 	background: rgba(170, 170, 170, 0.3) !important;
 }
 .white-popup {
-    background-color: rgba(26, 28, 34, 0.8) !important;
-    border: 1px solid #23282e !important;
-    color: #fff !important;
+	background-color: rgba(26, 28, 34, 0.9) !important;
+	border: 1px solid #23282e !important;
+	color: #fff !important;
 	border-radius: 4px !important;
 	padding: 2px !important;
 }
