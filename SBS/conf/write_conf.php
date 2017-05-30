@@ -1,4 +1,8 @@
 <?php
+session_name("opengamepanel_web");
+session_start();
+
+if(!empty($_SESSION['users_group'])=='admin'){
 
 $f = "theme.config";
 $json = json_decode(file_get_contents($f));
@@ -64,5 +68,5 @@ $replace = "/* *** THEME STYLER *** */\n".$replace."\n/* *** THEME STYLER END **
 $search = "/\/\* \*\*\* THEME STYLER \*\*\* \*\/(.*)\/\* \*\*\* THEME STYLER END \*\*\* \*\//s";
 file_put_contents($stylesheet, preg_replace($search,$replace,$string));
 
-
+}
 ?>

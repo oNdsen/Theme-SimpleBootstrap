@@ -1,4 +1,0 @@
-<Files "theme.config">
-Order Allow,Deny
-Deny from all
-</Files>
