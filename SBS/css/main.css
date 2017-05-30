@@ -72,7 +72,7 @@ input[type="image"]{
 }
 
 .redirectLink {
-	margin-bottom: 20px;
+	margin-bottom: 15px !important;
 }
 
 h0, h1, h2, h3, h4, h5, h6 {
