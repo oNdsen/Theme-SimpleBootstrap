@@ -315,6 +315,49 @@ button.mfp-close:focus {
 }
 
 
+/* *** UI-Dialog Restyling *** */
+.ui-widget-content {
+        background-color: transparent !important;
+        border-color: transparent !important;
+}
+.ui-dialog {
+        background-color: rgba(26, 28, 34, 0.8) !important;
+        border: 1px solid #23282e !important;
+}
+.ui-draggable .ui-dialog-titlebar {
+        background-color: #1997c6;
+        border: none;
+        color: #fff;
+}
+input[name="map-image"] {
+        color: #fff;
+        outline: none;
+}
+.ui-widget-content {
+        height: auto !important;
+}
+.ui-dialog-titlebar-close:before {
+        content: "\f00d";
+}
+.ui-dialog-titlebar-close
+{
+	font-family: FontAwesome !important;
+	background-image: -webkit-linear-gradient(top, #d9534f 0, #c12e2a 100%);
+	background-image: -o-linear-gradient(top, #d9534f 0, #c12e2a 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d9534f), to(#c12e2a));
+	background-image: linear-gradient(to bottom, #d9534f 0, #c12e2a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc12e2a', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	background-repeat: repeat-x;
+	border-color: #b92c28;
+}
+.ui-dialog-titlebar-close:hover
+{
+	background-color: #c12e2a;
+}
+
+
+
 /* ***** MENU ***** */
 @media (min-width: 992px) {
 	.navbar-header {
@@ -580,3 +623,4 @@ h0 a:hover
 
 
 /* *** THEME STYLER END *** */
+

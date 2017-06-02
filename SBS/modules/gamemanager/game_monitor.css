@@ -187,9 +187,7 @@ tr.maintr td:last-child {
 	color: #fff !important;
 }
 
-#server_icon[class^="action-stop"],
-.ui-dialog-titlebar-close
-{
+#server_icon[class^="action-stop"] {
 	background-image: -webkit-linear-gradient(top, #d9534f 0, #c12e2a 100%);
 	background-image: -o-linear-gradient(top, #d9534f 0, #c12e2a 100%);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d9534f), to(#c12e2a));
@@ -199,9 +197,7 @@ tr.maintr td:last-child {
 	background-repeat: repeat-x;
 	border-color: #b92c28;
 }
-#server_icon[class^="action-stop"]:hover,
-.ui-dialog-titlebar-close:hover
-{
+#server_icon[class^="action-stop"]:hover {
 	background-color: #c12e2a;
 }
 
@@ -220,7 +216,7 @@ tr.maintr td:last-child {
 	background-position: 0 -15px;
 }
 
-
+/*
 .ui-widget-content {
 	background-color: transparent !important;
 	border-color: transparent !important;
@@ -247,3 +243,4 @@ button.ui-dialog-titlebar-close {
 button.ui-dialog-titlebar-close:before {
 	content: "\f00d";
 }
+*/
