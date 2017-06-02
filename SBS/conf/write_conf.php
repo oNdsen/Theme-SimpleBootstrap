@@ -1,6 +1,6 @@
 <?php
-session_name("opengamepanel_web");
-session_start();
+include("../../../includes/helpers.php");
+startSession();
 
 if(!empty($_SESSION['users_group'])=='admin'){
 
@@ -22,7 +22,7 @@ $replace = file_get_contents($style_file);
 
 $cbgf = realpath(dirname(__FILE__)).'/custom_bg';
 if(!file_exists($cbgf)){
-	mkdir($cbgf, 0777, true);
+	mkdir($cbgf, 0744, true);
 }
 
 if(!empty($_GET['del_custom_bg'])){
@@ -48,7 +48,7 @@ if(!empty($_FILES)){
 		$file_name = 'custom.'.$file_extension;
 		$file_complete = $cbgf.'/'.$file_name;
 		if ((($_FILES["bg_file"]["type"] == "image/png") || ($_FILES["bg_file"]["type"] == "image/jpg") || ($_FILES["bg_file"]["type"] == "image/jpeg")) && in_array($file_extension, $validextensions)) {
-			if ($_FILES["file"]["error"]==0){
+			if ($_FILES["bg_file"]["error"]==0){
 				if(file_exists($file_complete)){ unlink($file_complete); }
 				move_uploaded_file($_FILES['bg_file']['tmp_name'],$file_complete);
 				$bg_conf = $file_name;
