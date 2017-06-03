@@ -2,7 +2,7 @@
 include("../../../includes/helpers.php");
 startSession();
 
-if(!empty($_SESSION['users_group'])=='admin'){
+if(isset($_SESSION['users_group']) && $_SESSION['users_group'] == 'admin'){
 
 $f = "theme.config";
 $json = json_decode(file_get_contents($f));
