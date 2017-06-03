@@ -25,6 +25,10 @@ $(document).ready(function() {
 
 	});
 
+        $('table .first_row > td').each(function(){
+                $(this).replaceWith('<th>'+$(this).html()+'</th>');
+        });
+
 	$('.magnificContentsDiv').bind("DOMSubtreeModified",function(){
 		$('.updateLink').attr('disabled','disabled').addClass('form-control').css('display','inline-block');
 		$('.copyButton').addClass('btn').addClass('btn-sm').addClass('btn-primary');

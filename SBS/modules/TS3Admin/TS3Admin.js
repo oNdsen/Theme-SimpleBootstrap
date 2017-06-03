@@ -6,5 +6,14 @@ $(document).ready(function() {
 
 	$('.edit, .main [href^="home.php?m=TS3Admin"], .main [href*="home.php?m=TS3Admin&token"], .main [href="home.php?m=TS3Admin&liveview"]').addClass('btn').addClass('btn-xs').addClass('btn-primary');
 
+	$('.propHeadline').parent('td').each(function(){
+		$(this).replaceWith('<th colspan="'+$(this).attr('colspan')+'">'+$(this).html()+'</th>');
+	});
+	$('.table .table0').each(function(){
+		$(this).replaceWith('<th>'+$(this).html()+'</th>');
+	});
+
+	$('#serverview').css('padding','5px').wrap('<table class="table table-sm table-striped">');
+
 });
 
