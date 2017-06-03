@@ -57,8 +57,21 @@ h0 {
 }
 
 .column .placeholder {
-	background: #1a1c22;
-	margin: 20px;
+	background-color: rgba(26, 28, 34, 0.5);
+	border: 2px dotted rgba(26, 28, 34, 0.8);
+	height: 100px !important;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+.column .placeholder:after {
+	content: "\f045";
+	color: rgba(255, 255, 255, 0.5);
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	line-height: 77px;
+	font-family: "FontAwesome";
+	font-size: 40px;
 }
 
 @media only screen and (max-width: 991px){
