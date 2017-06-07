@@ -140,6 +140,16 @@ h0 {
         color: rgba(255, 255, 255, 0.6);
 }
 
+.online_servers div[id^="refreshed-"] div {
+	display: block;
+	text-align: center;
+	float: none !important;
+}
+.online_servers div[id^="refreshed-"] div:nth-child(2)>div {
+        display: inline-block;
+}
+
+
 
 /* *** SYSTEM UPTIME *** */
 #refreshed-0 > #column4:nth-child(1){
