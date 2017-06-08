@@ -5,6 +5,8 @@ startSession();
 if(isset($_SESSION['users_group']) && $_SESSION['users_group'] == 'admin'){
 
 $f = "theme.config";
+$pace = '../css/pace.css';
+$rp = realpath(dirname(__FILE__));
 $json = json_decode(file_get_contents($f));
 
 $style = $json->{"style"};
@@ -20,7 +22,7 @@ if(!empty($_GET['del_custom_bg'])){
 $string = file_get_contents($stylesheet);
 $replace = file_get_contents($style_file);
 
-$cbgf = realpath(dirname(__FILE__)).'/custom_bg';
+$cbgf = $rp.'/custom_bg';
 if(!file_exists($cbgf)){
 	mkdir($cbgf, 0744, true);
 }
@@ -67,6 +69,10 @@ if($bg_conf!='no'){
 $replace = "/* *** THEME STYLER *** */\n".$replace."\n/* *** THEME STYLER END *** */";
 $search = "/\/\* \*\*\* THEME STYLER \*\*\* \*\/(.*)\/\* \*\*\* THEME STYLER END \*\*\* \*\//s";
 file_put_contents($stylesheet, preg_replace($search,$replace,$string));
+
+/* *** pace.css Rewrite *** */
+if(file_exists($pace)){ unlink($pace); }
+file_put_contents($pace, '@import url("pace_'.$_POST['style_loader'].'.css");');
 
 }
 ?>
