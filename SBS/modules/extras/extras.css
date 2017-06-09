@@ -34,5 +34,22 @@ b.label {
 	margin-left: 5px;
 }
 .dragbox-content input[type="checkbox"] {
-    margin-right: 5px;
+	margin-right: 5px;
+}
+
+.extras .bloc {
+	padding: 0px;
+	float: left;
+	width: 49%;
+}
+.extras .bloc:first-of-type {
+	margin-right: 1%;
+}
+
+@media screen and (max-width: 1200px) {
+	.extras .bloc {
+		float: none;
+		width: 100%;
+		margin: 0px;
+	}
 }

@@ -8,6 +8,8 @@ $(document).ready(function() {
 	$('[href^="#install_"]').addClass('btn').addClass('btn-success').addClass('btn-xs').removeAttr('style');
         $('[href^="?m=extras&searchForUpdates="]').addClass('btn').addClass('btn-primary').addClass('btn-xs').removeAttr('style');
 
+	$('.main > h2').after('<div class="extras"></div>');
+
 	$('.dragbox-content').each(function(){
         	var form_selector = $(this);
         	$(form_selector).prepend('<br>');
@@ -24,6 +26,18 @@ $(document).ready(function() {
         	});
         	$(form_selector.find('br')).remove();
         	$(form_selector.find('tr')).wrapAll('<table class="table table-sm table-striped" />');
+
+	});
+
+
+	$('.dragbox').appendTo('.main .extras').removeAttr('style');
+
+	$('tr').each(function () {
+		$(this).find('td').each(function () {
+			if ($(this).text().trim() == "") {
+				$(this).closest("tr").remove();
+			};
+		});
 	});
 
         $('b[style="color:green;"').addClass('label').addClass('label-success').css("color", "");
