@@ -64,6 +64,7 @@ $(document).ready(function() {
 	$(buttons).addClass('btn').addClass('btn-sm').addClass('btn-primary');
 	$('.main [href^="?m=modulemanager&p=del&id="]').addClass('btn').addClass('btn-xs').addClass('btn-danger');
 	$('.main [href^="?m=modulemanager&p=add&module="]').addClass('btn').addClass('btn-xs').addClass('btn-success');
+	$('.main [href="?m=server"]').addClass('btn').addClass('btn-sm').addClass('btn-primary');
 
 	$('em').each(function(){
 		$(this).replaceWith('<div class="label label-warning inline-block">'+$(this).html()+'</div>');
