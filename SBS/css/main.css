@@ -375,6 +375,7 @@ input[name="map-image"] {
 .navbar-header {
 	background-color: rgba(25, 151, 198, 0.8);
 	border-radius: 4px;
+	margin-bottom: 3px;
 }
 .navbar-brand {
 	color: #fff;

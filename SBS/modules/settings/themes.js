@@ -12,7 +12,18 @@ $(document).ready(function() {
 			$('form[action="?m=settings&p=themes"] tr:last').after('<tr><td align="right"><label for="style_tab">Theme Style:</label></td><td align="left"><select id="style_tab" name="style_tab" class="form-control"><option value="dark" selected>dark</option><option value="light">light</option></select></td><td><i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Changes the Theme Style"></i></td></tr>');
                 }
 
-		$('form[action="?m=settings&p=themes"] tr:last').after('<tr><td align="right"><label for="style_loader">Pace Loader<div class="label label-warning show">Active: '+get_active_loader()+'</div></label></td><td align="left"><select id="style_loader" name="style_loader" class="form-control"><option value="center-bar">Center Bar</option><option value="corner-indicator">Corner Indicator</option><option value="flash">Flash</option><option value="loading-bar">Loading Bar</option></select></td><td><i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Changes the Pace Load Indicator"></i></td></tr>');
+		var paces = {'Center Bar':'center-bar', 'Corner Indicator':'corner-indicator', 'Flash':'flash', 'Loading Bar':'loading-bar'};
+		var add_row = '<tr><td align="right"><label for="style_loader">Pace Loader</label></td><td align="left"><select id="style_loader" name="style_loader" class="form-control">';
+		for (var key in paces) {
+			if(paces[key]==get_active_loader()){
+				add_row += '<option value="'+paces[key]+'" selected>'+key+'</option>';
+			}else{
+				add_row += '<option value="'+paces[key]+'">'+key+'</option>';
+			}
+		}
+		add_row += '</td><td><i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="Changes the Pace Load Indicator"></i></td></tr>';
+
+		$('form[action="?m=settings&p=themes"] tr:last').after(add_row);
 
 		if(json['custom_bg']=='no'){
 			var custom_bg_info = '<div class="label label-danger show">BG not set</div>';
