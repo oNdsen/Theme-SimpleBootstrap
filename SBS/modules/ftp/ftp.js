@@ -26,6 +26,8 @@ $(document).ready(function(){
 			$(this).contents().find('textarea, select, input[type=text]').addClass('form-control').removeAttr('style');
 			$(this).contents().find('form').addClass('form-group');
 
+			$(this).contents().find('.browse_rows_heading a').removeAttr('style').addClass('btn').addClass('btn-xs').addClass('btn-primary');
+
 			$(this).contents().find('img[src$="folder.png"]').replaceWith('<i class="fa fa-folder-open-o" aria-hidden="true"></i>');
 			$(this).contents().find('img[src$="txt.png"]').replaceWith('<i class="fa fa-pencil-square-o" aria-hidden="true"></i>');
 			$(this).contents().find('img[src$="mime.png"], img[src$="exec.png"]').replaceWith('<i class="fa fa-cog" aria-hidden="true"></i>');
@@ -35,12 +37,6 @@ $(document).ready(function(){
                         $(this).contents().find('img[src$="view_tree.png"]').replaceWith('<i class="fa fa-list-alt" aria-hidden="true"></i>');
                         $(this).contents().find('img[src$="document.png"]').replaceWith('<i class="fa fa-file-text-o" aria-hidden="true"></i>');
 			$(this).contents().find('img[src$="terminal.png"]').replaceWith('<i class="fa fa-terminal" aria-hidden="true"></i>');
-			//$(this).contents().find('img[src$="back.png"]').replaceWith('<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>');
-			/*$(this).contents().find('img[src$="back.png"]').ready(function(){
-				$(this).parent().addClass('btn').addClass('btn-sm').addClass('btn-primary');
-				var title = $(this).parent().attr('title');
-				$(this).replaceWith(title);
-			});*/
                 });
         }
 });

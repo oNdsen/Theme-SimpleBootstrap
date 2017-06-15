@@ -21,3 +21,6 @@
 	content: "\f147";
 }
 
+#servermonitor td {
+	vertical-align: middle;
+}
