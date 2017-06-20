@@ -142,7 +142,12 @@
 .ts3_viewer b {
 	font-weight: normal;
 }
-
+.ts3_viewer {
+	border: 0px !important;
+	background: transparent;
+	margin: 0px 10px;
+	width: auto !important;
+}
 
 tr.maintr td:last-child {
 	padding: 3px 8px 3px;

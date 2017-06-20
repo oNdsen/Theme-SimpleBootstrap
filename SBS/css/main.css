@@ -155,7 +155,7 @@ span.versionInfo{
 }
 
 table:not(.online_servers) {
-	border: 1px solid #22252f;
+	border: 1px solid rgba(34, 37, 47, 0.6);
 }
 
 .table .table {

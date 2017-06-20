@@ -8,6 +8,8 @@ $(document).ready(function() {
 
 	$('.dragbox-content img').remove();
 
+	$('.bloc > div > br').remove();
+
 	var url = "themes/SBS/js/radialIndicator.js";
 	$.getScript( url, function() {
 		animateProgressBars();
