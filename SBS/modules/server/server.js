@@ -8,4 +8,7 @@ $(document).ready(function() {
 	$('#servermonitor .success').addClass('label').addClass('label-success').removeClass('success');
 	$('#servermonitor .failure').addClass('label').addClass('label-danger').removeClass('failure');
 
+	$('#servermonitor img[src="images/magnifglass.png"]').each(function(){
+		$(this).replaceWith('<span data-toggle="tooltip" class="image-tooltip" title="<img src=\''+$(this).attr('data-url')+'\' />"><i class="fa fa-search" aria-hidden="true"></i></span>');
+	});
 });

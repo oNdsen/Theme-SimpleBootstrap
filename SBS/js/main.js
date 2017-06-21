@@ -181,7 +181,10 @@ $(document).ready(function() {
 			$(this).replaceWith('<i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="left" title="'+tip_text+'"></i>');
 		});
 		$('[data-toggle="tooltip"]').each(function(){
-			$(this).tooltip();
+			$(this).tooltip({
+				animated: 'fade',
+				html: true
+			});
 		});
 	});
 

@@ -207,6 +207,13 @@ th {
 [data-toggle="tooltip"] {
 	font-size: 130%;
 }
+.image-tooltip + .tooltip {
+	left: 40px !important;
+}
+.image-tooltip + .tooltip > .tooltip-inner {
+	max-width: 100%;
+	padding: 0px;
+}
 
 .online { color: #5cb85c; }
 .offline { color: #d9534f; }
