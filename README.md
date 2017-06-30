@@ -1,7 +1,6 @@
 # Simple Bootstrap Theme for Open Game Panel
 
-## THIS THEME IS OUTDATED!
-## DOWNLOAD THE NEWEST VERSION DIRECTLY VIA OGP PANEL -> EXTRAS
+## THIS THEME IS OUTDATED! DOWNLOAD THE NEWEST VERSION DIRECTLY VIA OGP PANEL -> EXTRAS
 
 ### Install Instructions:
  * Download the [latest Release](https://github.com/oNdsen/OGP_SBS/archive/master.zip)
